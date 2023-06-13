@@ -34,7 +34,7 @@ const options = {
       value: "#2196f3",
     },
     shape: {
-      type: "star",
+      type: "circle",
     },
   },
 };
