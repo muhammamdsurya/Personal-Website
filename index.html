@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Rizki | Premium Cyber Portfolio</title>
+    <meta name="description" content="Portfolio resmi Muhammad Rizki - Full Stack Web Developer. Menampilkan proyek animasi, sertifikasi digital lencana, dan dashboard futuristik.">
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Tech/Code Matrix Background Decoration -->
+    <div class="tech-bg-grid"></div>
+    <div class="code-watermark-1">&lt;div class="developer"&gt;<br>&nbsp;&nbsp;const name = "Rizki";<br>&nbsp;&nbsp;const skills = ["FullStack", "Cyber"];<br>&lt;/div&gt;</div>
+    <div class="code-watermark-2">const database = new SecureCluster();<br>database.connect().then(() => optimize());</div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <svg class="logo-svg" viewBox="0 0 50 50" width="30" height="30">
+                    <polygon points="25,5 45,15 45,35 25,45 5,35 5,15" fill="none" stroke="#2563EB" stroke-width="3"/>
+                    <text x="50%" y="65%" fill="#FFFFFF" font-family="'Inter', sans-serif" font-weight="800" font-size="20" text-anchor="middle">M</text>
+                </svg>
+                Rizki<span>.dev</span>
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#resume" class="nav-link"><i class="fas fa-file-alt"></i> Resume</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fas fa-code-branch"></i> Projects</a></li>
+                <li><a href="#certificates" class="nav-link"><i class="fas fa-award"></i> Certificates</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-paper-plane"></i> Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="https://github.com" target="_blank" class="nav-icon-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="nav-icon-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-wrapper">
+            <div class="hero-content reveal">
+                <div class="status-badge">
+                    <span class="pulse-dot"></span> Available for Freelance & Full-time
+                </div>
+                <h1 class="hero-title">Hi, I am <span>Muhammad Rizki</span></h1>
+                <h2 class="hero-job">Full Stack Web Developer</h2>
+                <p class="hero-text">
+                    Membangun aplikasi web modern dengan interaksi visual yang memukau, performa super cepat, dan arsitektur kode berskala enterprise.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary"><i class="fas fa-project-diagram"></i> Explore Projects</a>
+                    <a href="#contact" class="btn btn-outline"><i class="fas fa-comments"></i> Hire Me</a>
+                </div>
+            </div>
+            
+            <div class="hero-image-container reveal">
+                <div class="profile-glow-wrapper">
+                    <!-- Advanced Cyber Avatar Portrait SVG Placeholder -->
+                    <svg class="profile-img" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.3"/>
+                                <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+                            </radialGradient>
+                            <linearGradient id="cyberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#2563EB" />
+                                <stop offset="50%" stop-color="#8B5CF6" />
+                                <stop offset="100%" stop-color="#10B981" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="100" cy="100" r="95" fill="url(#glowGrad)" stroke="url(#cyberGrad)" stroke-width="2" stroke-dasharray="5 3"/>
+                        <circle cx="100" cy="100" r="80" fill="#0f172a" />
+                        <!-- Character Vector Art Elements -->
+                        <path d="M100 45 C80 45 70 55 70 75 C70 95 85 105 100 105 C115 105 130 95 130 75 C130 55 120 45 100 45 Z" fill="#1e293b"/>
+                        <circle cx="100" cy="75" r="28" fill="#334155"/>
+                        <!-- Headset/Neon lines accessory -->
+                        <path d="M65 75 Q100 35 135 75" fill="none" stroke="#3B82F6" stroke-width="4"/>
+                        <rect x="60" y="70" width="10" height="15" rx="3" fill="#8B5CF6"/>
+                        <rect x="130" y="70" width="10" height="15" rx="3" fill="#8B5CF6"/>
+                        <!-- Clothes/Shoulder -->
+                        <path d="M50 160 C50 130 70 120 100 120 C130 120 150 130 150 160 L140 180 L60 180 Z" fill="url(#cyberGrad)"/>
+                        <!-- Tech circuit overlay lines -->
+                        <path d="M20 100 L40 100 L50 110" fill="none" stroke="#10B981" stroke-width="2"/>
+                        <circle cx="20" cy="100" r="3" fill="#10B981"/>
+                        <path d="M180 100 L160 100 L150 90" fill="none" stroke="#2563EB" stroke-width="2"/>
+                        <circle cx="180" cy="100" r="3" fill="#2563EB"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title"><i class="fas fa-user-astronaut"></i> About Me</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="about-wrapper">
+                <div class="about-content reveal">
+                    <div class="terminal-box">
+                        <div class="terminal-header">
+                            <span class="t-dot red"></span>
+                            <span class="t-dot yellow"></span>
+                            <span class="t-dot green"></span>
+                            <span class="t-title">rizki_bio.sh</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p class="t-line"><span class="t-prompt">rizki@dev:~$</span> cat summary.txt</p>
+                            <p class="t-text">Saya adalah Full Stack Web Developer yang mendedikasikan waktu untuk merancang sistem web tangguh, interaktif, dan berkinerja tinggi. Kombinasi estetika desain modern dan fungsionalitas backend yang aman menjadi prioritas utama di setiap baris kode saya.</p>
+                            <p class="t-line"><span class="t-prompt">rizki@dev:~$</span> systemctl status core-skills</p>
+                            <p class="t-text text-success">● Active: operational (100% committed to pixel-perfection and modular architectures)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-card reveal">
+                        <div class="stat-icon-wrapper blue-glow"><i class="fas fa-clock"></i></div>
+                        <h3 class="stat-number">3+</h3>
+                        <p class="stat-label">Years Experience</p>
+                    </div>
+                    <div class="stat-card reveal">
+                        <div class="stat-icon-wrapper purple-glow"><i class="fas fa-cubes"></i></div>
+                        <h3 class="stat-number">20+</h3>
+                        <p class="stat-label">Projects Deployed</p>
+                    </div>
+                    <div class="stat-card reveal">
+                        <div class="stat-icon-wrapper green-glow"><i class="fas fa-shield-alt"></i></div>
+                        <h3 class="stat-number">15+</h3>
+                        <p class="stat-label">Certificates Validated</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title"><i class="fas fa-history"></i> Journey & Skills</h2>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="resume-grid">
+                <!-- Education Timeline Nodes -->
+                <div class="resume-column reveal">
+                    <h3 class="resume-toggle-title"><i class="fas fa-graduation-cap"></i> Education Nodes</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot stage-1"></div>
+                            <div class="timeline-date">2020 - 2024</div>
+                            <h4 class="timeline-title">Bachelor's Degree in Computer Science</h4>
+                            <p class="timeline-institution">Universitas XYZ</p>
+                            <p class="timeline-desc">Fokus Utama: Software Engineering, Relational & NoSQL Database Optimization, Cloud Architecture Fundamental.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Timeline Nodes -->
+                <div class="resume-column reveal">
+                    <h3 class="resume-toggle-title"><i class="fas fa-network-wired"></i> Experience Milestones</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot stage-2"></div>
+                            <div class="timeline-date">2023 - Present</div>
+                            <h4 class="timeline-title">Full Stack Developer</h4>
+                            <p class="timeline-institution">ABC Digital Corporation</p>
+                            <ul class="timeline-list">
+                                <li>Membangun arsitektur microservices dashboard internal korporat.</li>
+                                <li>Meningkatkan performa load-time aset visual web hingga 40%.</li>
+                                <li>Mengintegrasikan RESTful API dan sistem otentikasi JWT yang aman.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Skills Group Grid with Badges -->
+            <div class="skills-section reveal">
+                <h3 class="skills-title-main text-center">Core Technical Infrastructure</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Frontend Layer</h4>
+                        <div class="skill-tags">
+                            <span class="tag-html"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="tag-css"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span class="tag-js"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tag-tailwind"><i class="fab fa-css3"></i> TailwindCSS</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Backend Core</h4>
+                        <div class="skill-tags">
+                            <span class="tag-php"><i class="fab fa-php"></i> PHP Architecture</span>
+                            <span class="tag-laravel"><i class="fab fa-laravel"></i> Laravel Framework</span>
+                            <span class="tag-node"><i class="fab fa-node-js"></i> Node.js Engine</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Database Engines</h4>
+                        <div class="skill-tags">
+                            <span class="tag-mysql"><i class="fas fa-database"></i> MySQL Enterprise</span>
+                            <span class="tag-postgres"><i class="fas fa-database"></i> PostgreSQL</span>
+                            <span class="tag-mongo"><i class="fas fa-leaf"></i> MongoDB Atlas</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>DevOps & Tools</h4>
+                        <div class="skill-tags">
+                            <span class="tag-git"><i class="fab fa-git-alt"></i> Git Protocol</span>
+                            <span class="tag-github"><i class="fab fa-github"></i> GitHub Actions</span>
+                            <span class="tag-docker"><i class="fab fa-docker"></i> Containerization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center reveal" style="margin-top: 50px;">
+                <a href="assets/cv.pdf" download class="btn btn-primary btn-cv glow-blue-button">
+                    <i class="fas fa-cloud-download-alt"></i> Download Verified CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section with custom high fidelity inline SVGs representing applications -->
+    <section id="projects" class="projects section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title"><i class="fas fa-laptop-code"></i> Featured Production Projects</h2>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="project-grid">
+                <!-- Project 1: LuxeShop -->
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <!-- High Fidelity Monitor Desktop App Shop Mockup SVG -->
+                        <svg viewBox="0 0 400 220" class="project-placeholder-svg">
+                            <rect width="400" height="220" fill="#0f172a"/>
+                            <!-- Desktop Mockup frame -->
+                            <rect x="40" y="20" width="320" height="160" rx="6" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+                            <rect x="45" y="25" width="310" height="125" rx="2" fill="#020617"/>
+                            <!-- Stand -->
+                            <path d="M180 180 L220 180 L230 205 L170 205 Z" fill="#334155"/>
+                            <!-- UI Shop Elements -->
+                            <rect x="55" y="35" width="80" height="15" rx="3" fill="#2563EB" opacity="0.8"/>
+                            <circle cx="330" cy="42" r="8" fill="#10B981"/>
+                            <!-- Products Grid -->
+                            <rect x="55" y="65" width="85" height="55" rx="4" fill="#1e293b"/>
+                            <rect x="155" y="65" width="85" height="55" rx="4" fill="#1e293b"/>
+                            <rect x="255" y="65" width="85" height="55" rx="4" fill="#1e293b"/>
+                            <line x1="55" y1="130" x2="120" y2="130" stroke="#94A3B8" stroke-width="3"/>
+                            <line x1="155" y1="130" x2="210" y2="130" stroke="#94A3B8" stroke-width="3"/>
+                            <line x1="255" y1="130" x2="330" y2="130" stroke="#94A3B8" stroke-width="3"/>
+                        </svg>
+                        <div class="project-overlay-glow"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">LuxeShop Ecosystem</h3>
+                        <p class="project-desc">Platform E-Commerce multi-tenant modular dilengkapi secure payment gateway, analitik inventori real-time, dan invoice generator.</p>
+                        <div class="project-tech">
+                            <span>Laravel 10</span><span>PostgreSQL</span><span>TailwindCSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="proj-link"><i class="fas fa-bolt"></i> Live System</a>
+                            <a href="#" class="proj-link"><i class="fab fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: DataPulse Analytics -->
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <!-- High Fidelity Interactive Dashboard UI Charts SVG -->
+                        <svg viewBox="0 0 400 220" class="project-placeholder-svg">
+                            <rect width="400" height="220" fill="#0f172a"/>
+                            <rect x="20" y="20" width="360" height="180" rx="8" fill="#111827" stroke="#1E293B" stroke-width="2"/>
+                            <!-- Sidebar Mockup -->
+                            <rect x="20" y="20" width="60" height="180" fill="#1f2937" rx="8"/>
+                            <circle cx="50" cy="45" r="8" fill="#3B82F6"/>
+                            <circle cx="50" cy="75" r="6" fill="#4b5563"/>
+                            <circle cx="50" cy="105" r="6" fill="#4b5563"/>
+                            <!-- Main Charts -->
+                            <rect x="100" y="40" width="260" height="60" rx="6" fill="#030712"/>
+                            <!-- Chart Line curve path -->
+                            <path d="M110 90 Q150 50 190 80 T270 50 T350 70" fill="none" stroke="#8B5CF6" stroke-width="3"/>
+                            <!-- Bars chart group -->
+                            <rect x="100" y="120" width="40" height="60" rx="3" fill="#10B981" opacity="0.7"/>
+                            <rect x="155" y="140" width="40" height="40" rx="3" fill="#10B981" opacity="0.7"/>
+                            <rect x="210" y="110" width="40" height="70" rx="3" fill="#3B82F6" opacity="0.7"/>
+                            <rect x="265" y="130" width="40" height="50" rx="3" fill="#8B5CF6" opacity="0.7"/>
+                            <rect x="320" y="115" width="40" height="65" rx="3" fill="#2563EB" opacity="0.7"/>
+                        </svg>
+                        <div class="project-overlay-glow"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">DataPulse Core Analytics</h3>
+                        <p class="project-desc">Sistem monitoring metrik server cloud and visualisasi performa query cluster database skala masif dengan interaksi chart responsif.</p>
+                        <div class="project-tech">
+                            <span>Node.js</span><span>Express</span><span>ChartJS</span><span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="proj-link"><i class="fas fa-chart-line"></i> Dashboard</a>
+                            <a href="#" class="proj-link"><i class="fab fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: SyncTask Pro -->
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <!-- High Fidelity Kanban Board Columns UI Mockup SVG -->
+                        <svg viewBox="0 0 400 220" class="project-placeholder-svg">
+                            <rect width="400" height="220" fill="#0f172a"/>
+                            <rect x="20" y="20" width="360" height="180" rx="10" fill="#111827" stroke="#1E293B" stroke-width="2"/>
+                            <!-- Kanban Columns -->
+                            <!-- Col 1 -->
+                            <rect x="35" y="35" width="100" height="150" rx="6" fill="#1f2937"/>
+                            <line x1="45" y1="50" x2="90" y2="50" stroke="#EF4444" stroke-width="4" stroke-linecap="round"/>
+                            <rect x="42" y="65" width="86" height="30" rx="4" fill="#374151"/>
+                            <rect x="42" y="105" width="86" height="30" rx="4" fill="#374151"/>
+                            <!-- Col 2 -->
+                            <rect x="150" y="35" width="100" height="150" rx="6" fill="#1f2937"/>
+                            <line x1="160" y1="50" x2="210" y2="50" stroke="#F59E0B" stroke-width="4" stroke-linecap="round"/>
+                            <rect x="157" y="65" width="86" height="40" rx="4" fill="#2563EB" opacity="0.6"/>
+                            <!-- Col 3 -->
+                            <rect x="265" y="35" width="100" height="150" rx="6" fill="#1f2937"/>
+                            <line x1="275" y1="50" x2="310" y2="50" stroke="#10B981" stroke-width="4" stroke-linecap="round"/>
+                            <rect x="272" y="65" width="86" height="30" rx="4" fill="#374151"/>
+                            <rect x="272" y="105" width="86" height="35" rx="4" fill="#374151"/>
+                        </svg>
+                        <div class="project-overlay-glow"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">SyncTask Kanban Engine</h3>
+                        <p class="project-desc">Aplikasi kolaborasi tim virtual bergaya Trello lengkap dengan drag-and-drop handler, web sockets updates, dan permission level matrix.</p>
+                        <div class="project-tech">
+                            <span>JavaScript Vanilla</span><span>WebSockets</span><span>CSS Grid</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="proj-link"><i class="fas fa-th-large"></i> Launch App</a>
+                            <a href="#" class="proj-link"><i class="fab fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section with Embossed Medallion Badges SVGs -->
+    <section id="certificates" class="certificates section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title"><i class="fas fa-medal"></i> Verified Badges & Certifications</h2>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="certificate-grid">
+                <!-- Cert 1 -->
+                <div class="cert-card reveal">
+                    <div class="cert-icon-box">
+                        <!-- Circular Digital Security Badge/Stamp SVG -->
+                        <svg viewBox="0 0 80 80" width="70" height="70">
+                            <circle cx="40" cy="40" r="38" fill="#0f172a" stroke="#2563EB" stroke-width="2"/>
+                            <circle cx="40" cy="40" r="33" fill="none" stroke="#3B82F6" stroke-width="1" stroke-dasharray="4 2"/>
+                            <polygon points="40,18 58,26 58,48 40,62 22,48 22,26" fill="#2563EB" opacity="0.3" stroke="#3B82F6" stroke-width="2"/>
+                            <path d="M33 40 L38 45 L48 33" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="cert-info">
+                        <h3 class="cert-name">Google Cloud Certified - Data Analytics</h3>
+                        <p class="cert-issuer">Google Technical Professional Credentials</p>
+                        <p class="cert-year">ID Validation: GOOG-DA-9921820</p>
+                        <a href="https://coursera.org" target="_blank" class="cert-btn">Verify Blockchain Credential <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="cert-card reveal">
+                    <div class="cert-icon-box">
+                        <!-- AWS style circle technology badge SVG -->
+                        <svg viewBox="0 0 80 80" width="70" height="70">
+                            <circle cx="40" cy="40" r="38" fill="#0f172a" stroke="#8B5CF6" stroke-width="2"/>
+                            <path d="M40 15 L65 30 L65 50 L40 65 L15 50 L15 30 Z" fill="none" stroke="#A855F7" stroke-width="2"/>
+                            <circle cx="40" cy="40" r="12" fill="#8B5CF6" opacity="0.5"/>
+                            <i class="fas fa-cloud" style="font-size:14px; color:#FFFFFF;"></i>
+                            <text x="50%" y="54%" fill="#FFFFFF" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">AWS</text>
+                        </svg>
+                    </div>
+                    <div class="cert-info">
+                        <h3 class="cert-name">AWS Solutions Architect Associate</h3>
+                        <p class="cert-issuer">Amazon Web Services (AWS Training & Certification)</p>
+                        <p class="cert-year">ID Validation: AWS-ASA-882910</p>
+                        <a href="https://aws.amazon.com" target="_blank" class="cert-btn">Verify Infrastructure Credential <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title"><i class="fas fa-envelope-open-text"></i> Establish Network Connection</h2>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Left Details Info Panel -->
+                <div class="contact-info-panel reveal">
+                    <h3>Let's Forge Something Grand</h3>
+                    <p>Enkripsi pesan Anda di bawah ini atau hubungi langsung melalui hub saluran komunikasi digital utama saya.</p>
+                    
+                    <div class="info-list">
+                        <div class="info-item">
+                            <div class="info-icon icon-blue-neon"><i class="fas fa-at"></i></div>
+                            <div class="info-text">
+                                <span>Main Endpoint Email</span>
+                                <a href="mailto:rizki.dev@example.com">rizki.dev@example.com</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon icon-green-neon"><i class="fab fa-whatsapp"></i></div>
+                            <div class="info-text">
+                                <span>Secure Instant Messenger</span>
+                                <a href="https://wa.me/6281234567890" target="_blank">+62 812-3456-7890</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Custom Futuristic Network/Social Link Pills Group -->
+                    <div class="social-pills-container">
+                        <h4>Connected Grid Links</h4>
+                        <div class="pills-flex">
+                            <a href="#" class="pill-link x-pill"><i class="fab fa-twitter"></i> Twitter/X</a>
+                            <a href="#" class="pill-link tg-pill"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                            <a href="#" class="pill-link ig-pill"><i class="fab fa-instagram"></i> Instagram</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form Panel with complete input checking loops -->
+                <div class="contact-form-panel reveal">
+                    <form id="portfolio-contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="form-name"><i class="fas fa-terminal"></i> Identity Name</label>
+                            <input type="text" id="form-name" placeholder="John Doe" required>
+                            <span class="error-msg"><i class="fas fa-exclamation-triangle"></i> Input parameter 'Name' is required.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email"><i class="fas fa-fingerprint"></i> Return Email Address</label>
+                            <input type="email" id="form-email" placeholder="john@domain.com" required>
+                            <span class="error-msg"><i class="fas fa-exclamation-triangle"></i> Valid email parameter layout required.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-subject"><i class="fas fa-folder-open"></i> Packet Subject</label>
+                            <input type="text" id="form-subject" placeholder="Project Inquiry" required>
+                            <span class="error-msg"><i class="fas fa-exclamation-triangle"></i> Subject line must not be empty.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message"><i class="fas fa-comment-alt"></i> Message Payload Content</label>
+                            <textarea id="form-message" rows="4" placeholder="Describe requirements..." required></textarea>
+                            <span class="error-msg"><i class="fas fa-exclamation-triangle"></i> Payload string length must be > 0.</span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary glow-blue-button" style="width: 100%;">
+                            <span class="btn-text">Transmit Message Bundle</span>
+                            <span class="btn-spinner hidden"><i class="fas fa-circle-notch fa-spin"></i></span>
+                        </button>
+                        
+                        <div class="form-alert success hidden" id="form-success-alert">
+                            <i class="fas fa-check-circle"></i> Connection stable. Packet transmitted successfully to Rizki's core databank.
+                        </div>
+                        <div class="form-alert error hidden" id="form-error-alert">
+                            <i class="fas fa-exclamation-circle"></i> Transmission failed. Please resolve compilation errors in red fields above.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area with Neon highlight notes -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-logo">Muhammad Rizki <span>// FullStack Node Master</span></p>
+            <p class="footer-copy">&copy; 2026 Core Cryptographic System. All Rights Reserved.</p>
+            <div class="footer-status-tag"><span class="green-status-pulse"></span> Nodes connected: Global CDN Online</div>
+        </div>
+    </footer>
+
+    <!-- Custom Logic Script Link -->
+    <script src="js/script.js"></script>
+</body>
+</html>
