@@ -166,6 +166,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-left: 24px;  /* Jarak aman di sisi kiri (logo) */
+    padding-right: 24px; /* Jarak aman di sisi kanan (ikon sosmed) */
 }
 
 .nav-logo {
@@ -181,6 +183,11 @@ body {
 .nav-menu {
     display: flex;
     gap: 28px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 .nav-link {
@@ -319,6 +326,7 @@ body {
     width: 350px;
     height: 350px;
     border-radius: 50%;
+    overflow: hidden;
     position: relative;
     background: var(--bg-secondary);
     box-shadow: 
@@ -329,9 +337,18 @@ body {
     justify-content: center;
 }
 
-.profile-img {
-    width: 90%;
-    height: 90%;
+.profile-avatar {
+    width: 100%;
+    height: 100%;
+    
+    /* KUNCI UTAMA: Mengubah dari 'contain' kembali ke 'cover' */
+    object-fit: cover;         
+    
+    /* Menggeser fokus kamera sedikit ke atas agar kepala tidak terpotong terlalu banyak */
+    object-position: center 15%; 
+    
+    display: block;
+    border-radius: 50%; /* Menjaga lapisan gambar ikut membulat murni */
 }
 
 /* About / Interactive Command Terminal UI Box */
@@ -482,42 +499,156 @@ body {
 .skills-section { margin-top: 100px; }
 .skills-title-main { font-size: 1.8rem; margin-bottom: 45px; font-weight: 700; }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.skill-category {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    padding: 24px;
-    border-radius: 12px;
-}
-
-.skill-category h4 {
-    font-size: 1.05rem;
-    margin-bottom: 18px;
-    color: var(--text-primary);
-    font-weight: 700;
-    border-left: 3px solid var(--accent-cyan);
-    padding-left: 10px;
-}
-
-.skill-tags { display: flex; flex-wrap: wrap; gap: 10px; }
-
-.skill-tags span {
-    background-color: rgba(5, 8, 20, 0.5);
-    border: 1px solid var(--border-color);
-    padding: 8px 12px;
-    font-size: 0.85rem;
-    border-radius: 6px;
+/* ==========================================================
+   1. STYLE UTAMA UNTUK TOMBOL STATIK (NON-CLICKABLE)
+   ========================================================== */
+.skills-flat-container {
     display: flex;
-    align-items: center;
-    gap: 6px;
-    font-weight: 500;
+    flex-wrap: wrap;
+    justify-content: center; /* KUNCI 1: Membuat semua kotak otomatis rata tengah */
+    gap: 12px 16px;          /* KUNCI 2: Memberikan jarak antar kotak (12px atas-bawah, 16px kiri-kanan) */
+    
+    margin-top: 32px;        /* Jarak dari judul utama ke kumpulan kotak */
+    max-width: 1100px;       /* Membatasi lebar maksimal agar susunan kotak proporsional */
+    margin-left: auto;       /* Memastikan container utama berada di tengah halaman */
+    margin-right: auto;      /* Memastikan container utama berada di tengah halaman */
+    padding: 0 24px;         /* Jarak aman di kanan-kiri saat layar dikecilkan */
 }
-.skill-tags span i { color: var(--accent-cyan); }
+
+   .skills-flat-container span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;       /* Membuat sudut melengkung seperti tombol */
+    font-size: 0.9rem;
+    font-weight: 600;         /* Membuat teks lebih tegas */
+    text-transform: none;
+    cursor: default;          /* Mengubah kursor agar tidak memicu ikon "tangan/klik" */
+    user-select: none;        /* Mencegah teks ter-blok secara tidak sengaja */
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Efek hover lembut agar tombol terasa hidup, tanpa memberi impresi bisa diklik */
+.skills-flat-container span:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ==========================================================
+   2. PEWARNAAN EDIT SESUAI DENGAN BRAND TECH STACK (DARK THEME)
+   ========================================================== */
+
+/* HTML5 - Orange */
+.tag-html {
+    background: rgba(227, 76, 38, 0.1);
+    border-color: rgba(227, 76, 38, 0.4) !important;
+    color: #e34c26;
+}
+/* CSS3 - Blue */
+.tag-css {
+    background: rgba(38, 77, 228, 0.1);
+    border-color: rgba(38, 77, 228, 0.4) !important;
+    color: #264de4;
+}
+/* JavaScript - Yellow */
+.tag-js {
+    background: rgba(247, 223, 30, 0.1);
+    border-color: rgba(247, 223, 30, 0.4) !important;
+    color: #f7df1e;
+}
+/* Tailwind CSS - Cyan */
+.tag-tailwind {
+    background: rgba(6, 182, 212, 0.1);
+    border-color: rgba(6, 182, 212, 0.4) !important;
+    color: #06b6d4;
+}
+/* React JS - Bright Cyan */
+.tag-react {
+    background: rgba(97, 218, 251, 0.1);
+    border-color: rgba(97, 218, 251, 0.4) !important;
+    color: #61dafb;
+}
+/* PHP - Purple */
+.tag-php {
+    background: rgba(119, 123, 180, 0.1);
+    border-color: rgba(119, 123, 180, 0.4) !important;
+    color: #8892bf;
+}
+/* Laravel - Red */
+.tag-laravel {
+    background: rgba(255, 45, 32, 0.1);
+    border-color: rgba(255, 45, 32, 0.4) !important;
+    color: #ff2d20;
+}
+/* Node.js - Green */
+.tag-node {
+    background: rgba(51, 153, 51, 0.1);
+    border-color: rgba(51, 153, 51, 0.4) !important;
+    color: #339933;
+}
+/* MySQL - Blue/Orange Tint */
+.tag-mysql {
+    background: rgba(0, 117, 143, 0.1);
+    border-color: rgba(0, 117, 143, 0.4) !important;
+    color: #00758f;
+}
+/* PostgreSQL - Slate Blue */
+.tag-postgres {
+    background: rgba(51, 103, 145, 0.1);
+    border-color: rgba(51, 103, 145, 0.4) !important;
+    color: #4169e1;
+}
+/* MongoDB - Deep Green */
+.tag-mongo {
+    background: rgba(71, 162, 72, 0.1);
+    border-color: rgba(71, 162, 72, 0.4) !important;
+    color: #47a248;
+}
+/* Git - Bright Orange */
+.tag-git {
+    background: rgba(240, 80, 50, 0.1);
+    border-color: rgba(240, 80, 50, 0.4) !important;
+    color: #f05032;
+}
+/* GitHub Actions - White/Grey */
+.tag-github {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff;
+}
+/* Docker - Light Blue */
+.tag-docker {
+    background: rgba(36, 150, 237, 0.1);
+    border-color: rgba(36, 150, 237, 0.4) !important;
+    color: #2496ed;
+}
+/* Excel - Forest Green */
+.tag-excel {
+    background: rgba(16, 124, 65, 0.1);
+    border-color: rgba(16, 124, 65, 0.4) !important;
+    color: #107c41;
+}
+/* Apps Script - Google Blue */
+.tag-appscript {
+    background: rgba(66, 133, 244, 0.1);
+    border-color: rgba(66, 133, 244, 0.4) !important;
+    color: #4285f4;
+}
+/* Power BI - Gold/Yellow */
+.tag-powerbi {
+    background: rgba(242, 200, 17, 0.1);
+    border-color: rgba(242, 200, 17, 0.4) !important;
+    color: #f2c811;
+}
+/* SPSS - Dark Red / Crimson */
+.tag-spss {
+    background: rgba(213, 0, 0, 0.1);
+    border-color: rgba(213, 0, 0, 0.4) !important;
+    color: #ff4d4d;
+}
 
 /* Premium Production Projects Grid Architecture */
 .project-grid {
@@ -544,6 +675,18 @@ body {
     position: relative;
     overflow: hidden;
     background-color: #020617;
+    height: 220px;
+}
+
+.project-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;         /* KUNCI 2: Gambar akan otomatis terpotong rapi (cropped) tanpa menjadi gepeng/ketarik */
+    object-position: top center; /* Menentukan area fokus gambar (bisa diganti 'center' atau 'top center') */
+    
+    display: block;            /* Menghilangkan celah kosong (whitespace) bawaan browser di bawah gambar */
+    transition: transform 0.5s ease; /* Efek transisi halus untuk animasi */
 }
 
 .project-placeholder-svg {

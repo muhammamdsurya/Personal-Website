@@ -70,65 +70,97 @@ document.addEventListener('DOMContentLoaded', () => {
     const successAlert = document.getElementById('form-success-alert');
     const errorAlert = document.getElementById('form-error-alert');
 
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        let valid = true;
-        const requiredFields = contactForm.querySelectorAll('input[required], textarea[required]');
+   // Pastikan menambahkan kata 'async' sebelum parameter (e)
+contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    let valid = true;
+    const requiredFields = contactForm.querySelectorAll('input[required], textarea[required]');
 
-        requiredFields.forEach(field => {
-            const container = field.parentElement;
-            if (!field.value.trim()) {
-                container.classList.add('invalid');
-                valid = false;
-            } else {
-                container.classList.remove('invalid');
-                
-                // Regex check for specialized type fields (Email Layouts)
-                if (field.type === 'email') {
-                    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-                    if (!emailRegex.test(field.value.trim())) {
-                        container.classList.add('invalid');
-                        valid = false;
-                    } else {
-                        container.classList.remove('invalid');
-                    }
+    // 1. SISTEM VALIDASI ANDA
+    requiredFields.forEach(field => {
+        const container = field.parentElement;
+        if (!field.value.trim()) {
+            container.classList.add('invalid');
+            valid = false;
+        } else {
+            container.classList.remove('invalid');
+            
+            if (field.type === 'email') {
+                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!emailRegex.test(field.value.trim())) {
+                    container.classList.add('invalid');
+                    valid = false;
+                } else {
+                    container.classList.remove('invalid');
                 }
             }
-        });
+        }
+    });
 
-        if (valid) {
-            errorAlert.classList.add('hidden');
-            
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const btnText = submitBtn.querySelector('.btn-text');
-            const btnSpinner = submitBtn.querySelector('.btn-spinner');
-            
-            // Switch button state to transmitting mode
-            submitBtn.disabled = true;
-            btnText.textContent = 'Transmitting Bundle...';
-            btnSpinner.classList.remove('hidden');
+    // 2. JIKA FORM VALID, PROSES PENGIRIMAN DIJALANKAN
+    if (valid) {
+        errorAlert.classList.add('hidden');
+        
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const btnText = submitBtn.querySelector('.btn-text');
+        const btnSpinner = submitBtn.querySelector('.btn-spinner');
+        
+        // Aktifkan mode loading pada tombol Anda
+        submitBtn.disabled = true;
+        btnText.textContent = 'Transmitting Bundle...';
+        btnSpinner.classList.remove('hidden');
 
-            // Simulate database stream networking delay (1.2 Seconds)
-            setTimeout(() => {
-                submitBtn.disabled = false;
-                btnText.textContent = 'Transmit Message Bundle';
-                btnSpinner.classList.add('hidden');
-                
+        // Mengambil data form & menyisipkan Access Key sesuai dokumentasi Web3Forms
+       const formData = new FormData(contactForm);
+        
+        // Hapus duplikat data access_key jika tidak sengaja ada di HTML Anda
+        if (formData.has("access_key")) {
+            formData.delete("access_key");
+        }
+        
+        // Memaksa key dikirim sebagai string bersih tanpa spasi hantu
+        const cleanKey = "152082b7-f4cf-4213-913c-2fcfcf821cee".trim();
+        formData.append("access_key", cleanKey);
+        
+        try {
+            // Mengirim data menggunakan Async/Await Fetch API
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                // JIKA BERHASIL: Munculkan alert sukses Anda & kosongkan form
                 successAlert.classList.remove('hidden');
                 contactForm.reset();
                 
                 setTimeout(() => {
                     successAlert.classList.add('hidden');
                 }, 4000);
-            }, 1200);
+            } else {
+                // JIKA API WEB3FORMS MERESPON ERROR
+                alert("Error: " + data.message);
+            }
 
-        } else {
-            successAlert.classList.add('hidden');
-            errorAlert.classList.remove('hidden');
+        } catch (error) {
+            // JIKA TERJADI MASALAH JARINGAN INTERNET
+            alert("Something went wrong. Please try again.");
+        } finally {
+            // KONDISI APAPUN YANG TERJADI, KEMBALIKAN TOMBOL KE SEMULA
+            submitBtn.disabled = false;
+            btnText.textContent = 'Transmit Message Bundle';
+            btnSpinner.classList.add('hidden');
         }
-    });
 
+    } else {
+        // JIKA VALIDASI GAGAL
+        successAlert.classList.add('hidden');
+        errorAlert.classList.remove('hidden');
+    }
+});
     // Event listener to remove error flags interactively upon parameter adjust
     const formFields = contactForm.querySelectorAll('input, textarea');
     formFields.forEach(f => {
