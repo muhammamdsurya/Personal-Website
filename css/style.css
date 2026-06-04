@@ -776,10 +776,10 @@ a {
 .icon-green-neon { color: var(--accent-green); box-shadow: 0 0 15px rgba(16, 185, 129, 0.3); }
 
 .info-text span { display: block; font-size: 0.85rem; color: var(--text-secondary); }
-.info-text a { font-size: 1.1rem; font-weight: 600; }
+.info-text a { font-size: 1rem; font-weight: 600; }
 
 /* Connected Social Pills layout */
-.social-pills-container h4 { font-size: 1.1rem; margin-bottom: 15px; font-weight: 700; }
+.social-pills-container h4 { font-size: 1rem; margin-bottom: 15px; font-weight: 700; }
 .pills-flex { display: flex; flex-wrap: wrap; gap: 12px; }
 
 .pill-link {
