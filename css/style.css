@@ -45,13 +45,14 @@ body {
     width: 100%;
     height: 100%;
     z-index: -3;
-    background-image: 
+    background-image:
         linear-gradient(rgba(30, 46, 77, 0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(30, 46, 77, 0.1) 1px, transparent 1px);
     background-size: 40px 40px;
 }
 
-.code-watermark-1, .code-watermark-2 {
+.code-watermark-1,
+.code-watermark-2 {
     position: absolute;
     font-family: var(--font-mono);
     color: rgba(37, 99, 235, 0.04);
@@ -60,8 +61,16 @@ body {
     z-index: -2;
     white-space: nowrap;
 }
-.code-watermark-1 { top: 15%; left: 5%; }
-.code-watermark-2 { top: 65%; right: 5%; }
+
+.code-watermark-1 {
+    top: 15%;
+    left: 5%;
+}
+
+.code-watermark-2 {
+    top: 65%;
+    right: 5%;
+}
 
 .container {
     width: 100%;
@@ -74,8 +83,13 @@ body {
     padding: 120px 0;
 }
 
-.text-center { text-align: center; }
-.hidden { display: none !important; }
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
 
 /* Section Headers Decorative Design */
 .section-header {
@@ -166,8 +180,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 24px;  /* Jarak aman di sisi kiri (logo) */
-    padding-right: 24px; /* Jarak aman di sisi kanan (ikon sosmed) */
+    padding-left: 24px;
+    /* Jarak aman di sisi kiri (logo) */
+    padding-right: 24px;
+    /* Jarak aman di sisi kanan (ikon sosmed) */
 }
 
 .nav-logo {
@@ -178,7 +194,9 @@ body {
     gap: 10px;
 }
 
-.nav-logo span { color: var(--accent-cyan); }
+.nav-logo span {
+    color: var(--accent-cyan);
+}
 
 .nav-menu {
     display: flex;
@@ -201,14 +219,20 @@ a {
     border-radius: 6px;
 }
 
-.nav-link i { font-size: 0.85rem; transition: color var(--transition-speed); }
+.nav-link i {
+    font-size: 0.85rem;
+    transition: color var(--transition-speed);
+}
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: var(--text-primary);
     background-color: rgba(37, 99, 235, 0.1);
 }
 
-.nav-link.active i { color: var(--accent-cyan); }
+.nav-link.active i {
+    color: var(--accent-cyan);
+}
 
 .nav-actions {
     display: flex;
@@ -221,7 +245,9 @@ a {
     color: var(--text-secondary);
 }
 
-.nav-icon-link:hover { color: var(--text-primary); }
+.nav-icon-link:hover {
+    color: var(--text-primary);
+}
 
 .hamburger {
     display: none;
@@ -279,9 +305,20 @@ a {
 }
 
 @keyframes simplePulse {
-    0% { transform: scale(0.9); opacity: 1; }
-    50% { transform: scale(1.2); opacity: 0.5; }
-    100% { transform: scale(0.9); opacity: 1; }
+    0% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
 }
 
 .hero-title {
@@ -329,7 +366,7 @@ a {
     overflow: hidden;
     position: relative;
     background: var(--bg-secondary);
-    box-shadow: 
+    box-shadow:
         0 0 30px rgba(37, 99, 235, 0.2),
         0 0 60px rgba(139, 92, 246, 0.2);
     display: flex;
@@ -340,15 +377,16 @@ a {
 .profile-avatar {
     width: 100%;
     height: 100%;
-    
+
     /* KUNCI UTAMA: Mengubah dari 'contain' kembali ke 'cover' */
-    object-fit: cover;         
-    
+    object-fit: cover;
+
     /* Menggeser fokus kamera sedikit ke atas agar kepala tidak terpotong terlalu banyak */
-    object-position: center 15%; 
-    
+    object-position: center 15%;
+
     display: block;
-    border-radius: 50%; /* Menjaga lapisan gambar ikut membulat murni */
+    border-radius: 50%;
+    /* Menjaga lapisan gambar ikut membulat murni */
 }
 
 /* About / Interactive Command Terminal UI Box */
@@ -364,7 +402,7 @@ a {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
 .terminal-header {
@@ -381,9 +419,18 @@ a {
     height: 12px;
     border-radius: 50%;
 }
-.t-dot.red { background-color: #EF4444; }
-.t-dot.yellow { background-color: #F59E0B; }
-.t-dot.green { background-color: #10B981; }
+
+.t-dot.red {
+    background-color: #EF4444;
+}
+
+.t-dot.yellow {
+    background-color: #F59E0B;
+}
+
+.t-dot.green {
+    background-color: #10B981;
+}
 
 .t-title {
     font-family: var(--font-mono);
@@ -398,10 +445,24 @@ a {
     font-size: 0.95rem;
 }
 
-.t-line { color: var(--accent-cyan); margin-bottom: 10px; }
-.t-prompt { color: var(--accent-purple); }
-.t-text { color: var(--text-primary); margin-bottom: 25px; padding-left: 10px; }
-.text-success { color: var(--accent-green) !important; }
+.t-line {
+    color: var(--accent-cyan);
+    margin-bottom: 10px;
+}
+
+.t-prompt {
+    color: var(--accent-purple);
+}
+
+.t-text {
+    color: var(--text-primary);
+    margin-bottom: 25px;
+    padding-left: 10px;
+}
+
+.text-success {
+    color: var(--accent-green) !important;
+}
 
 /* Stats grid cards */
 .about-stats {
@@ -435,12 +496,31 @@ a {
     justify-content: center;
     font-size: 1.4rem;
 }
-.blue-glow { background-color: rgba(37, 99, 235, 0.1); color: var(--accent-blue); }
-.purple-glow { background-color: rgba(139, 92, 246, 0.1); color: var(--accent-purple); }
-.green-glow { background-color: rgba(16, 185, 129, 0.1); color: var(--accent-green); }
 
-.stat-number { font-size: 2rem; font-weight: 700; }
-.stat-label { color: var(--text-secondary); font-size: 0.9rem; }
+.blue-glow {
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--accent-blue);
+}
+
+.purple-glow {
+    background-color: rgba(139, 92, 246, 0.1);
+    color: var(--accent-purple);
+}
+
+.green-glow {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--accent-green);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
 
 /* Journey Timelines Interconnected Stage Nodes */
 .resume-grid {
@@ -458,7 +538,9 @@ a {
     gap: 10px;
 }
 
-.resume-toggle-title i { color: var(--accent-purple); }
+.resume-toggle-title i {
+    color: var(--accent-purple);
+}
 
 .timeline {
     border-left: 2px dashed var(--border-color);
@@ -466,7 +548,10 @@ a {
     position: relative;
 }
 
-.timeline-item { position: relative; margin-bottom: 30px; }
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
 
 .timeline-dot {
     position: absolute;
@@ -478,8 +563,16 @@ a {
     background-color: var(--bg-primary);
     border: 4px solid var(--accent-blue);
 }
-.timeline-dot.stage-1 { border-color: var(--accent-blue); box-shadow: 0 0 10px var(--accent-blue); }
-.timeline-dot.stage-2 { border-color: var(--accent-purple); box-shadow: 0 0 10px var(--accent-purple); }
+
+.timeline-dot.stage-1 {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 10px var(--accent-blue);
+}
+
+.timeline-dot.stage-2 {
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 10px var(--accent-purple);
+}
 
 .timeline-date {
     font-size: 0.85rem;
@@ -489,15 +582,43 @@ a {
     font-family: var(--font-mono);
 }
 
-.timeline-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 4px; }
-.timeline-institution { color: var(--text-secondary); font-size: 0.95rem; font-style: italic; margin-bottom: 10px; }
-.timeline-desc, .timeline-list { color: var(--text-secondary); font-size: 0.95rem; }
-.timeline-list { padding-left: 18px; }
-.timeline-list li { margin-bottom: 6px; }
+.timeline-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.timeline-institution {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.timeline-desc,
+.timeline-list {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.timeline-list {
+    padding-left: 18px;
+}
+
+.timeline-list li {
+    margin-bottom: 6px;
+}
 
 /* Infrastructure Skill Cards Grid Framework */
-.skills-section { margin-top: 100px; }
-.skills-title-main { font-size: 1.8rem; margin-bottom: 45px; font-weight: 700; }
+.skills-section {
+    margin-top: 100px;
+}
+
+.skills-title-main {
+    font-size: 1.8rem;
+    margin-bottom: 45px;
+    font-weight: 700;
+}
 
 /* ==========================================================
    1. STYLE UTAMA UNTUK TOMBOL STATIK (NON-CLICKABLE)
@@ -505,27 +626,38 @@ a {
 .skills-flat-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* KUNCI 1: Membuat semua kotak otomatis rata tengah */
-    gap: 12px 16px;          /* KUNCI 2: Memberikan jarak antar kotak (12px atas-bawah, 16px kiri-kanan) */
-    
-    margin-top: 32px;        /* Jarak dari judul utama ke kumpulan kotak */
-    max-width: 1100px;       /* Membatasi lebar maksimal agar susunan kotak proporsional */
-    margin-left: auto;       /* Memastikan container utama berada di tengah halaman */
-    margin-right: auto;      /* Memastikan container utama berada di tengah halaman */
-    padding: 0 24px;         /* Jarak aman di kanan-kiri saat layar dikecilkan */
+    justify-content: center;
+    /* KUNCI 1: Membuat semua kotak otomatis rata tengah */
+    gap: 12px 16px;
+    /* KUNCI 2: Memberikan jarak antar kotak (12px atas-bawah, 16px kiri-kanan) */
+
+    margin-top: 32px;
+    /* Jarak dari judul utama ke kumpulan kotak */
+    max-width: 1100px;
+    /* Membatasi lebar maksimal agar susunan kotak proporsional */
+    margin-left: auto;
+    /* Memastikan container utama berada di tengah halaman */
+    margin-right: auto;
+    /* Memastikan container utama berada di tengah halaman */
+    padding: 0 24px;
+    /* Jarak aman di kanan-kiri saat layar dikecilkan */
 }
 
-   .skills-flat-container span {
+.skills-flat-container span {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     padding: 10px 20px;
-    border-radius: 8px;       /* Membuat sudut melengkung seperti tombol */
+    border-radius: 8px;
+    /* Membuat sudut melengkung seperti tombol */
     font-size: 0.9rem;
-    font-weight: 600;         /* Membuat teks lebih tegas */
+    font-weight: 600;
+    /* Membuat teks lebih tegas */
     text-transform: none;
-    cursor: default;          /* Mengubah kursor agar tidak memicu ikon "tangan/klik" */
-    user-select: none;        /* Mencegah teks ter-blok secara tidak sengaja */
+    cursor: default;
+    /* Mengubah kursor agar tidak memicu ikon "tangan/klik" */
+    user-select: none;
+    /* Mencegah teks ter-blok secara tidak sengaja */
     border: 1px solid transparent;
     transition: all 0.3s ease;
 }
@@ -547,102 +679,119 @@ a {
     border-color: rgba(227, 76, 38, 0.4) !important;
     color: #e34c26;
 }
+
 /* CSS3 - Blue */
 .tag-css {
     background: rgba(38, 77, 228, 0.1);
     border-color: rgba(38, 77, 228, 0.4) !important;
     color: #264de4;
 }
+
 /* JavaScript - Yellow */
 .tag-js {
     background: rgba(247, 223, 30, 0.1);
     border-color: rgba(247, 223, 30, 0.4) !important;
     color: #f7df1e;
 }
+
 /* Tailwind CSS - Cyan */
 .tag-tailwind {
     background: rgba(6, 182, 212, 0.1);
     border-color: rgba(6, 182, 212, 0.4) !important;
     color: #06b6d4;
 }
+
 /* React JS - Bright Cyan */
 .tag-react {
     background: rgba(97, 218, 251, 0.1);
     border-color: rgba(97, 218, 251, 0.4) !important;
     color: #61dafb;
 }
+
 /* PHP - Purple */
 .tag-php {
     background: rgba(119, 123, 180, 0.1);
     border-color: rgba(119, 123, 180, 0.4) !important;
     color: #8892bf;
 }
+
 /* Laravel - Red */
 .tag-laravel {
     background: rgba(255, 45, 32, 0.1);
     border-color: rgba(255, 45, 32, 0.4) !important;
     color: #ff2d20;
 }
+
 /* Node.js - Green */
 .tag-node {
     background: rgba(51, 153, 51, 0.1);
     border-color: rgba(51, 153, 51, 0.4) !important;
     color: #339933;
 }
+
 /* MySQL - Blue/Orange Tint */
 .tag-mysql {
     background: rgba(0, 117, 143, 0.1);
     border-color: rgba(0, 117, 143, 0.4) !important;
     color: #00758f;
 }
+
 /* PostgreSQL - Slate Blue */
 .tag-postgres {
     background: rgba(51, 103, 145, 0.1);
     border-color: rgba(51, 103, 145, 0.4) !important;
     color: #4169e1;
 }
+
 /* MongoDB - Deep Green */
 .tag-mongo {
     background: rgba(71, 162, 72, 0.1);
     border-color: rgba(71, 162, 72, 0.4) !important;
     color: #47a248;
 }
+
 /* Git - Bright Orange */
 .tag-git {
     background: rgba(240, 80, 50, 0.1);
     border-color: rgba(240, 80, 50, 0.4) !important;
     color: #f05032;
 }
+
 /* GitHub Actions - White/Grey */
 .tag-github {
     background: rgba(255, 255, 255, 0.05);
     border-color: rgba(255, 255, 255, 0.2) !important;
     color: #ffffff;
 }
+
 /* Docker - Light Blue */
 .tag-docker {
     background: rgba(36, 150, 237, 0.1);
     border-color: rgba(36, 150, 237, 0.4) !important;
     color: #2496ed;
 }
+
 /* Excel - Forest Green */
 .tag-excel {
     background: rgba(16, 124, 65, 0.1);
     border-color: rgba(16, 124, 65, 0.4) !important;
     color: #107c41;
 }
+
 /* Apps Script - Google Blue */
 .tag-appscript {
     background: rgba(66, 133, 244, 0.1);
     border-color: rgba(66, 133, 244, 0.4) !important;
     color: #4285f4;
 }
+
 /* Power BI - Gold/Yellow */
 .tag-powerbi {
     background: rgba(242, 200, 17, 0.1);
     border-color: rgba(242, 200, 17, 0.4) !important;
     color: #f2c811;
 }
+
 /* SPSS - Dark Red / Crimson */
 .tag-spss {
     background: rgba(213, 0, 0, 0.1);
@@ -681,12 +830,16 @@ a {
 .project-img-wrapper img {
     width: 100%;
     height: 100%;
-    
-    object-fit: cover;         /* KUNCI 2: Gambar akan otomatis terpotong rapi (cropped) tanpa menjadi gepeng/ketarik */
-    object-position: top center; /* Menentukan area fokus gambar (bisa diganti 'center' atau 'top center') */
-    
-    display: block;            /* Menghilangkan celah kosong (whitespace) bawaan browser di bawah gambar */
-    transition: transform 0.5s ease; /* Efek transisi halus untuk animasi */
+
+    object-fit: cover;
+    /* KUNCI 2: Gambar akan otomatis terpotong rapi (cropped) tanpa menjadi gepeng/ketarik */
+    object-position: top center;
+    /* Menentukan area fokus gambar (bisa diganti 'center' atau 'top center') */
+
+    display: block;
+    /* Menghilangkan celah kosong (whitespace) bawaan browser di bawah gambar */
+    transition: transform 0.5s ease;
+    /* Efek transisi halus untuk animasi */
 }
 
 .project-placeholder-svg {
@@ -700,11 +853,31 @@ a {
     transform: scale(1.04);
 }
 
-.project-info { padding: 24px; }
-.project-name { font-size: 1.35rem; font-weight: 700; margin-bottom: 8px; }
-.project-desc { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px; height: 70px; overflow: hidden; }
+.project-info {
+    padding: 24px;
+}
 
-.project-tech { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.project-name {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.project-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    height: 70px;
+    overflow: hidden;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
 .project-tech span {
     font-size: 0.75rem;
     font-family: var(--font-mono);
@@ -721,8 +894,19 @@ a {
     border-top: 1px solid var(--border-color);
     padding-top: 16px;
 }
-.proj-link { font-size: 0.9rem; font-weight: 600; color: var(--text-secondary); display: flex; align-items: center; gap: 6px; }
-.proj-link:hover { color: var(--text-primary); }
+
+.proj-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.proj-link:hover {
+    color: var(--text-primary);
+}
 
 /* Circular Stamp Verification Certificate cards */
 .certificate-grid {
@@ -741,12 +925,41 @@ a {
     align-items: center;
 }
 
-.cert-icon-box { flex-shrink: 0; }
-.cert-info h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 6px; }
-.cert-issuer { color: var(--text-primary); font-size: 0.95rem; margin-bottom: 4px; }
-.cert-year { font-family: var(--font-mono); color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 12px; }
-.cert-btn { color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px; }
-.cert-btn:hover { text-decoration: underline; }
+.cert-icon-box {
+    flex-shrink: 0;
+}
+
+.cert-info h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.cert-issuer {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.cert-year {
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+}
+
+.cert-btn {
+    color: var(--accent-cyan);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cert-btn:hover {
+    text-decoration: underline;
+}
 
 /* Contact Network Grid Layout and Verification Banners */
 .contact-grid {
@@ -755,11 +968,29 @@ a {
     gap: 50px;
 }
 
-.contact-info-panel h3 { font-size: 1.8rem; font-weight: 700; margin-bottom: 16px; }
-.contact-info-panel p { color: var(--text-secondary); margin-bottom: 35px; }
+.contact-info-panel h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
 
-.info-list { display: flex; flex-direction: column; gap: 24px; margin-bottom: 40px; }
-.info-item { display: flex; gap: 20px; align-items: center; }
+.contact-info-panel p {
+    color: var(--text-secondary);
+    margin-bottom: 35px;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.info-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
 
 .info-icon {
     width: 52px;
@@ -772,15 +1003,40 @@ a {
     justify-content: center;
     font-size: 1.3rem;
 }
-.icon-blue-neon { color: var(--accent-cyan); box-shadow: var(--neon-blue-glow); }
-.icon-green-neon { color: var(--accent-green); box-shadow: 0 0 15px rgba(16, 185, 129, 0.3); }
 
-.info-text span { display: block; font-size: 0.85rem; color: var(--text-secondary); }
-.info-text a { font-size: 1rem; font-weight: 600; }
+.icon-blue-neon {
+    color: var(--accent-cyan);
+    box-shadow: var(--neon-blue-glow);
+}
+
+.icon-green-neon {
+    color: var(--accent-green);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+}
+
+.info-text span {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.info-text a {
+    font-size: 1rem;
+    font-weight: 600;
+}
 
 /* Connected Social Pills layout */
-.social-pills-container h4 { font-size: 1rem; margin-bottom: 15px; font-weight: 700; }
-.pills-flex { display: flex; flex-wrap: wrap; gap: 12px; }
+.social-pills-container h4 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.pills-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
 
 .pill-link {
     padding: 10px 20px;
@@ -792,10 +1048,28 @@ a {
     gap: 8px;
     border: 1px solid var(--border-color);
 }
-.x-pill { background-color: rgba(255,255,255,0.03); color: #FFF; }
-.tg-pill { background-color: rgba(0,136,204,0.1); color: #0088cc; border-color: rgba(0,136,204,0.3); }
-.ig-pill { background-color: rgba(225,48,108,0.1); color: #e1306c; border-color: rgba(225,48,108,0.3); }
-.pill-link:hover { transform: translateY(-2px); filter: brightness(1.2); }
+
+.x-pill {
+    background-color: rgba(255, 255, 255, 0.03);
+    color: #FFF;
+}
+
+.tg-pill {
+    background-color: rgba(0, 136, 204, 0.1);
+    color: #0088cc;
+    border-color: rgba(0, 136, 204, 0.3);
+}
+
+.ig-pill {
+    background-color: rgba(225, 48, 108, 0.1);
+    color: #e1306c;
+    border-color: rgba(225, 48, 108, 0.3);
+}
+
+.pill-link:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.2);
+}
 
 /* Form Field Interventions Frame */
 .contact-form-panel form {
@@ -805,11 +1079,26 @@ a {
     border-radius: 16px;
 }
 
-.form-group { margin-bottom: 24px; position: relative; }
-.form-group label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 10px; color: var(--text-secondary); }
-.form-group label i { color: var(--accent-cyan); margin-right: 6px; }
+.form-group {
+    margin-bottom: 24px;
+    position: relative;
+}
 
-.form-group input, .form-group textarea {
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+}
+
+.form-group label i {
+    color: var(--accent-cyan);
+    margin-right: 6px;
+}
+
+.form-group input,
+.form-group textarea {
     width: 100%;
     background-color: var(--bg-primary);
     border: 1px solid var(--border-color);
@@ -819,17 +1108,57 @@ a {
     font-size: 0.95rem;
     transition: border-color var(--transition-speed) ease;
 }
-.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent-cyan); }
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-cyan);
+}
 
 /* Errors Validation Alert Elements */
-.form-group.invalid input, .form-group.invalid textarea { border-color: #EF4444; }
-.error-msg { color: #EF4444; font-size: 0.8rem; margin-top: 6px; display: none; font-weight: 500; }
-.error-msg i { margin-right: 4px; }
-.form-group.invalid .error-msg { display: block; }
+.form-group.invalid input,
+.form-group.invalid textarea {
+    border-color: #EF4444;
+}
 
-.form-alert { padding: 16px; border-radius: 8px; margin-top: 24px; font-size: 0.95rem; display: flex; align-items: center; gap: 10px; font-weight: 500; }
-.form-alert.success { background-color: rgba(16, 185, 129, 0.15); border: 1px solid #10B981; color: #10B981; }
-.form-alert.error { background-color: rgba(239, 68, 68, 0.15); border: 1px solid #EF4444; color: #EF4444; }
+.error-msg {
+    color: #EF4444;
+    font-size: 0.8rem;
+    margin-top: 6px;
+    display: none;
+    font-weight: 500;
+}
+
+.error-msg i {
+    margin-right: 4px;
+}
+
+.form-group.invalid .error-msg {
+    display: block;
+}
+
+.form-alert {
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 24px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.form-alert.success {
+    background-color: rgba(16, 185, 129, 0.15);
+    border: 1px solid #10B981;
+    color: #10B981;
+}
+
+.form-alert.error {
+    background-color: rgba(239, 68, 68, 0.15);
+    border: 1px solid #EF4444;
+    color: #EF4444;
+}
 
 /* System Footer Area Layout specs */
 .footer {
@@ -844,9 +1173,22 @@ a {
     align-items: center;
 }
 
-.footer-logo { font-weight: 800; font-size: 1.2rem; }
-.footer-logo span { color: var(--text-secondary); font-size: 0.9rem; font-weight: 400; font-family: var(--font-mono); }
-.footer-copy { font-size: 0.9rem; color: var(--text-secondary); }
+.footer-logo {
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.footer-logo span {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-family: var(--font-mono);
+}
+
+.footer-copy {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
 
 .footer-status-tag {
     font-size: 0.85rem;
@@ -856,6 +1198,7 @@ a {
     gap: 8px;
     font-family: var(--font-mono);
 }
+
 .green-status-pulse {
     width: 6px;
     height: 6px;
@@ -870,34 +1213,95 @@ a {
     transform: translateY(25px);
     transition: opacity 500ms ease-out, transform 500ms ease-out;
 }
-.reveal.active { opacity: 1; transform: translateY(0); }
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /* RESPONSIVE DESIGN PARAMETERS (TABLETS & MOBILE DISPLAYS) */
 @media (max-width: 1024px) {
-    .hero-wrapper { grid-template-columns: 1fr; text-align: center; gap: 40px; }
-    .hero-content { order: 2; }
-    .hero-image-container { order: 1; }
-    .hero-buttons { justify-content: center; }
-    .about-wrapper { grid-template-columns: 1fr; gap: 40px; }
-    .skills-grid { grid-template-columns: repeat(2, 1fr); }
-    .project-grid { grid-template-columns: repeat(2, 1fr); }
-    .certificate-grid { grid-template-columns: 1fr; }
-    .contact-grid { grid-template-columns: 1fr; gap: 50px; }
-    .footer-content { flex-direction: column; gap: 20px; text-align: center; }
+    .hero-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-content {
+        order: 2;
+    }
+
+    .hero-image-container {
+        order: 1;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {
-    .section-padding { padding: 75px 0; }
-    .hero-title { font-size: 2.6rem; }
-    .hero-job { font-size: 1.5rem; }
-    .section-title { font-size: 2rem; }
-    
+    .section-padding {
+        padding: 75px 0;
+    }
+
+    .hero-title {
+        font-size: 2.6rem;
+    }
+
+    .hero-job {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
     /* Hamburger Side Panel triggers */
-    .hamburger { display: block; }
-    .hamburger.active .bar:nth-child(2) { opacity: 0; }
-    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-    
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -911,16 +1315,147 @@ a {
         transition: left 0.3s ease;
         border-right: 1px solid var(--border-color);
     }
-    .nav-menu.active { left: 0; }
-    .nav-menu li { margin: 12px 0; }
-    .nav-link { font-size: 1.05rem; width: 100%; }
-    .nav-actions .nav-icon-link { display: none; }
-    
-    .resume-grid { grid-template-columns: 1fr; gap: 40px; }
-    .skills-grid { grid-template-columns: 1fr; }
-    .project-grid { grid-template-columns: 1fr; }
-    .cert-card { flex-direction: column; text-align: center; }
-    .hero-buttons { flex-direction: column; }
-    .btn { width: 100%; }
-    .contact-form-panel form { padding: 24px; }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 12px 0;
+    }
+
+    .nav-link {
+        font-size: 1.05rem;
+        width: 100%;
+    }
+
+    .nav-actions .nav-icon-link {
+        display: none;
+    }
+
+    .resume-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cert-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .contact-form-panel form {
+        padding: 24px;
+    }
+}
+
+
+/* Style untuk Modal Utama */
+.gallery-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    /* Pastikan di atas elemen apapun */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Background hitam transparan */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Wrapper Gambar agar pas di tengah */
+.modal-content-wrapper {
+    max-width: 80%;
+    max-height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 4px;
+    animation: zoomIn 0.3s ease;
+}
+
+/* Tombol Close */
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-modal:hover {
+    color: #bbb;
+}
+
+/* Tombol Navigasi Kiri & Kanan */
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.prev-btn {
+    left: 40px;
+}
+
+.next-btn {
+    right: 40px;
+}
+
+/* Efek Animasi Muncul */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
