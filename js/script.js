@@ -1,233 +1,235 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. Mobile Menu Hamburger Interactivity ---
+    // --- 1. Mobile menu ---
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
+    const setMenu = (open) => {
+        hamburger.classList.toggle('active', open);
+        navMenu.classList.toggle('active', open);
+        hamburger.setAttribute('aria-expanded', open);
+        document.body.classList.toggle('menu-open', open);
+    };
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
-    });
+    hamburger.addEventListener('click', () => setMenu(!navMenu.classList.contains('active')));
+    navLinks.forEach(link => link.addEventListener('click', () => setMenu(false)));
 
-    // --- 2. Dynamic Sticky Navigation Control ---
+    // --- 2. Navbar background on scroll ---
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
 
-    // --- 3. Intersection Observer Scroll Reveal Engine ---
+    // --- 3. Scroll reveal, staggered among siblings ---
     const revealElements = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                revealObserver.unobserve(entry.target); // Reveal once only
+                revealObserver.unobserve(entry.target);
             }
         });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -40px 0px'
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach(el => {
+        const siblings = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
+        el.style.setProperty('--i', siblings.indexOf(el));
+        revealObserver.observe(el);
     });
 
-    revealElements.forEach(el => revealObserver.observe(el));
-
-    // --- 4. Auto Active Menu Highlighter Loop ---
+    // --- 4. Active nav link ---
     const sections = document.querySelectorAll('section');
     const activeObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const id = entry.target.getAttribute('id');
                 navLinks.forEach(link => {
-                    if (link.getAttribute('href') === `#${id}`) {
-                        link.classList.add('active');
-                    } else {
-                        link.classList.remove('active');
-                    }
+                    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
                 });
             }
         });
-    }, {
-        threshold: 0.25,
-        rootMargin: '-25% 0px -55% 0px'
-    });
+    // A thin band at 25–45% of the viewport: whichever section crosses it is current.
+    // threshold must stay 0 — sections are taller than the band, so a ratio like 0.25 is never reached.
+    }, { threshold: 0, rootMargin: '-25% 0px -55% 0px' });
 
     sections.forEach(sec => activeObserver.observe(sec));
 
-    // --- 5. Interactive Form Validation and Transmission Simulation ---
+    // --- 5. Contact form (Web3Forms) ---
     const contactForm = document.getElementById('portfolio-contact-form');
     const successAlert = document.getElementById('form-success-alert');
     const errorAlert = document.getElementById('form-error-alert');
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-    // Pastikan menambahkan kata 'async' sebelum parameter (e)
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
+        successAlert.classList.add('hidden');
+        errorAlert.classList.add('hidden');
 
-        let valid = true;
-        const requiredFields = contactForm.querySelectorAll('input[required], textarea[required]');
-
-        // 1. SISTEM VALIDASI ANDA
-        requiredFields.forEach(field => {
-            const container = field.parentElement;
-            if (!field.value.trim()) {
-                container.classList.add('invalid');
-                valid = false;
-            } else {
-                container.classList.remove('invalid');
-
-                if (field.type === 'email') {
-                    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-                    if (!emailRegex.test(field.value.trim())) {
-                        container.classList.add('invalid');
-                        valid = false;
-                    } else {
-                        container.classList.remove('invalid');
-                    }
-                }
-            }
+        let firstInvalid = null;
+        contactForm.querySelectorAll('input[required], textarea[required]').forEach(field => {
+            const value = field.value.trim();
+            const invalid = !value || (field.type === 'email' && !emailRegex.test(value));
+            field.parentElement.classList.toggle('invalid', invalid);
+            field.setAttribute('aria-invalid', invalid);
+            if (invalid && !firstInvalid) firstInvalid = field;
         });
 
-        // 2. JIKA FORM VALID, PROSES PENGIRIMAN DIJALANKAN
-        if (valid) {
-            errorAlert.classList.add('hidden');
+        if (firstInvalid) {
+            firstInvalid.focus();
+            return;
+        }
 
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const btnText = submitBtn.querySelector('.btn-text');
-            const btnSpinner = submitBtn.querySelector('.btn-spinner');
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const btnText = submitBtn.querySelector('.btn-text');
+        const label = btnText.textContent;
+        submitBtn.disabled = true;
+        btnText.textContent = 'Sending…';
 
-            // Aktifkan mode loading pada tombol Anda
-            submitBtn.disabled = true;
-            btnText.textContent = 'Transmitting Bundle...';
-            btnSpinner.classList.remove('hidden');
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm)
+            });
+            const data = await response.json().catch(() => ({}));
 
-            // Mengambil data form & menyisipkan Access Key sesuai dokumentasi Web3Forms
-            const formData = new FormData(contactForm);
+            if (!response.ok) throw new Error(data.message || 'Message not sent. Please try again.');
 
-            // Hapus duplikat data access_key jika tidak sengaja ada di HTML Anda
-            if (formData.has("access_key")) {
-                formData.delete("access_key");
-            }
-
-            // Memaksa key dikirim sebagai string bersih tanpa spasi hantu
-            const cleanKey = "152082b7-f4cf-4213-913c-2fcfcf821cee".trim();
-            formData.append("access_key", cleanKey);
-
-            try {
-                // Mengirim data menggunakan Async/Await Fetch API
-                const response = await fetch("https://api.web3forms.com/submit", {
-                    method: "POST",
-                    body: formData
-                });
-
-                const data = await response.json();
-
-                if (response.ok) {
-                    // JIKA BERHASIL: Munculkan alert sukses Anda & kosongkan form
-                    successAlert.classList.remove('hidden');
-                    contactForm.reset();
-
-                    setTimeout(() => {
-                        successAlert.classList.add('hidden');
-                    }, 4000);
-                } else {
-                    // JIKA API WEB3FORMS MERESPON ERROR
-                    alert("Error: " + data.message);
-                }
-
-            } catch (error) {
-                // JIKA TERJADI MASALAH JARINGAN INTERNET
-                alert("Something went wrong. Please try again.");
-            } finally {
-                // KONDISI APAPUN YANG TERJADI, KEMBALIKAN TOMBOL KE SEMULA
-                submitBtn.disabled = false;
-                btnText.textContent = 'Transmit Message Bundle';
-                btnSpinner.classList.add('hidden');
-            }
-
-        } else {
-            // JIKA VALIDASI GAGAL
-            successAlert.classList.add('hidden');
+            successAlert.classList.remove('hidden');
+            contactForm.reset();
+            setTimeout(() => successAlert.classList.add('hidden'), 5000);
+        } catch (error) {
+            // fetch() rejects with TypeError on network failure; anything else is the API's message.
+            errorAlert.querySelector('span').textContent = error instanceof TypeError
+                ? 'Message not sent. Check your connection and try again.'
+                : error.message;
             errorAlert.classList.remove('hidden');
+        } finally {
+            submitBtn.disabled = false;
+            btnText.textContent = label;
         }
     });
-    // Event listener to remove error flags interactively upon parameter adjust
-    const formFields = contactForm.querySelectorAll('input, textarea');
-    formFields.forEach(f => {
+
+    contactForm.querySelectorAll('input, textarea').forEach(f => {
         f.addEventListener('input', () => {
-            const group = f.parentElement;
-            if (group.classList.contains('invalid')) {
-                group.classList.remove('invalid');
-            }
+            f.parentElement.classList.remove('invalid');
+            f.removeAttribute('aria-invalid');
         });
     });
-});
 
-$(document).ready(function () {
+    // --- 6. Project case studies (native <dialog> slide-over) ---
+    // Each .project-card carries its screenshots (data-images) and a hidden .case-study block.
+    const caseDialog = document.getElementById('case-study');
+    const csBody = caseDialog.querySelector('.cs-body');
+    const csImg = document.getElementById('cs-img');
+    const csImgLink = document.getElementById('cs-img-link');
+    const csCount = document.getElementById('cs-count');
+    const csThumbs = document.getElementById('cs-thumbs');
     let images = [];
     let currentIndex = 0;
 
-    // 1. Ketika Gambar Utama diklik
-    $('.gallery-trigger').on('click', function () {
-        // Ambil string gambar lalu pecah menjadi array
-        const imageString = $(this).attr('data-images');
-        images = imageString.split(',').map(img => img.trim());
+    const showImage = (i) => {
+        currentIndex = (i + images.length) % images.length;
+        csImg.src = csImgLink.href = images[currentIndex];
+        csCount.textContent = `${currentIndex + 1} / ${images.length}`;
+        [...csThumbs.children].forEach((t, n) => t.setAttribute('aria-current', n === currentIndex));
+    };
 
-        // Mulai dari gambar pertama (index 0)
-        currentIndex = 0;
+    const makeThumb = (src, n) => {
+        const thumb = document.createElement('button');
+        thumb.type = 'button';
+        thumb.className = 'cs-thumb';
+        thumb.setAttribute('aria-label', `Screenshot ${n + 1}`);
+        const img = new Image();
+        img.src = src;
+        img.alt = '';
+        thumb.append(img);
+        thumb.addEventListener('click', () => showImage(n));
+        return thumb;
+    };
 
-        // Tampilkan modal dan set gambarnya
-        updateModalImage();
-        $('#galleryModal').css('display', 'flex');
+    document.querySelectorAll('.cs-trigger').forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const card = trigger.closest('.project-card');
+            images = card.dataset.images.split(',').map(src => src.trim());
+
+            document.getElementById('cs-kicker').textContent = card.querySelector('.project-kicker').textContent;
+            document.getElementById('cs-title').textContent = card.querySelector('.project-name').textContent;
+            document.getElementById('cs-content').innerHTML = card.querySelector('.case-study').innerHTML;
+
+            const links = document.createElement('div');
+            links.className = 'cs-links';
+            links.append(...[...card.querySelectorAll('.project-links a')].map(a => a.cloneNode(true)));
+            document.getElementById('cs-footer').replaceChildren(card.querySelector('.project-tech').cloneNode(true), links);
+
+            csImg.alt = card.querySelector('.project-img-wrapper img').alt;
+            csThumbs.replaceChildren(...images.map(makeThumb));
+            showImage(0);
+            csBody.scrollTop = 0;
+            caseDialog.showModal();
+        });
     });
 
-    // 2. Fungsi untuk update gambar di dalam modal
-    function updateModalImage() {
-        $('#modalImg').attr('src', images[currentIndex]);
+    caseDialog.querySelector('.cs-next').addEventListener('click', () => showImage(currentIndex + 1));
+    caseDialog.querySelector('.cs-prev').addEventListener('click', () => showImage(currentIndex - 1));
+    caseDialog.querySelector('.cs-close').addEventListener('click', () => caseDialog.close());
+    // A click whose target is the dialog itself landed on the backdrop; Escape closes natively.
+    caseDialog.addEventListener('click', (e) => { if (e.target === caseDialog) caseDialog.close(); });
+    caseDialog.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+        if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+    });
+
+    // --- 7. Mirror portrait: tilts toward the pointer, drifts slowly when idle ---
+    const stage = document.getElementById('portrait-stage');
+    if (stage && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const MAX_TILT = 14;      // degrees at full deflection
+        const IDLE_AFTER = 1500;  // ms without input before the idle drift takes over
+        const clamp = (v) => Math.max(-1, Math.min(1, v));
+        const target = { x: 0, y: 0 };   // -1..1
+        const current = { x: 0, y: 0 };
+        let lastInput = -Infinity;
+        let lastFrame = 0;
+        let visible = false;
+
+        const hero = document.querySelector('.hero');
+        hero.addEventListener('pointermove', (e) => {
+            const r = stage.getBoundingClientRect();
+            target.x = clamp((e.clientX - (r.left + r.width / 2)) / r.width);
+            target.y = clamp((e.clientY - (r.top + r.height / 2)) / r.height);
+            lastInput = performance.now();
+        });
+        hero.addEventListener('pointerleave', () => { lastInput = -Infinity; });
+
+        const frame = (now) => {
+            if (!visible) return;
+            if (now - lastInput > IDLE_AFTER) {
+                const t = now / 1000;           // slow Lissajous drift: ~12 s and ~18 s periods
+                target.x = Math.sin(t * 0.5) * 0.55;
+                target.y = Math.sin(t * 0.35 + 1) * 0.4;
+            }
+            const dt = Math.min((now - lastFrame) / 1000, 0.1);
+            lastFrame = now;
+            const ease = 1 - Math.exp(-dt * 4);  // same feel at 60 Hz and 120 Hz
+            current.x += (target.x - current.x) * ease;
+            current.y += (target.y - current.y) * ease;
+
+            const s = stage.style;
+            s.setProperty('--ry', `${current.x * MAX_TILT}deg`);
+            s.setProperty('--rx', `${-current.y * MAX_TILT}deg`);
+            s.setProperty('--px', `${-current.x * 10}px`);
+            s.setProperty('--py', `${-current.y * 10}px`);
+            s.setProperty('--gx', `${50 + current.x * 45}%`);
+            s.setProperty('--gy', `${40 + current.y * 45}%`);
+            s.setProperty('--sx', `${50 - current.x * 60}%`);
+            requestAnimationFrame(frame);
+        };
+
+        // Only animate while the portrait is on screen
+        new IntersectionObserver(([entry]) => {
+            const wasVisible = visible;
+            visible = entry.isIntersecting;
+            if (visible && !wasVisible) requestAnimationFrame((now) => { lastFrame = now; frame(now); });
+        }).observe(stage);
     }
-
-    // 3. Tombol Next
-    $('.next-btn').on('click', function (e) {
-        e.stopPropagation(); // Mencegah modal tertutup
-        currentIndex = (currentIndex + 1) % images.length; // Loop kembali ke awal jika sudah foto terakhir
-        updateModalImage();
-    });
-
-    // 4. Tombol Prev
-    $('.prev-btn').on('click', function (e) {
-        e.stopPropagation();
-        currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop ke akhir jika di foto pertama
-        updateModalImage();
-    });
-
-    // 5. Tombol Close
-    $('.close-modal').on('click', function () {
-        $('#galleryModal').css('display', 'none');
-    });
-
-    // 6. Klik area hitam di luar gambar untuk menutup modal
-    $('#galleryModal').on('click', function (e) {
-        if ($(e.target).hasClass('gallery-modal') || $(e.target).hasClass('modal-content-wrapper')) {
-            $('#galleryModal').css('display', 'none');
-        }
-    });
-
-    // 7. Navigasi menggunakan Keyboard (Opsional tapi bagus untuk UX)
-    $(document).on('keydown', function (e) {
-        if ($('#galleryModal').is(':visible')) {
-            if (e.key === "ArrowRight") $('.next-btn').click();
-            if (e.key === "ArrowLeft") $('.prev-btn').click();
-            if (e.key === "Escape") $('.close-modal').click();
-        }
-    });
 });

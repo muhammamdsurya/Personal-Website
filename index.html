@@ -1,684 +1,909 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suryaa Portfolio</title>
-    <meta name="description" content="Portfolio Suryaa - Full Stack Web Developer.">
+    <title>Muhammad Surya Rusfauzi · Data, BI &amp; Software Engineering</title>
+    <meta name="description"
+        content="Muhammad Surya Rusfauzi: BI Developer & Analyst with 5+ years of software engineering. ETL pipelines, data modeling, and dashboards that drive decisions.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Muhammad Surya Rusfauzi · Data, BI & Software Engineering">
+    <meta property="og:description"
+        content="BI Developer & Analyst with 5+ years of software engineering. ETL pipelines, data modeling, and dashboards.">
+    <meta property="og:url" content="https://muhammadsuryapersonalweb.netlify.app/">
+    <meta property="og:image" content="https://muhammadsuryapersonalweb.netlify.app/img/photo.jpeg">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230c0f12'/%3E%3Ctext x='16' y='22.5' font-family='Arial' font-weight='700' font-size='17' text-anchor='middle' fill='%2345d0b0'%3ES%3C/text%3E%3C/svg%3E">
+    <script>document.documentElement.classList.add('js');</script>
 
-    <!-- Google Fonts & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Custom Style -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/light/style.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="tech-bg-grid" aria-hidden="true"></div>
 
-    <!-- Tech/Code Matrix Background Decoration -->
-    <div class="tech-bg-grid"></div>
-    <div class="code-watermark-1">&lt;div class="developer"&gt;<br>&nbsp;&nbsp;const name =
-        "Suryaa";<br>&nbsp;&nbsp;const skills = ["FullStack", "Cyber"];<br>&lt;/div&gt;</div>
-    <div class="code-watermark-2">const database = new SecureCluster();<br>database.connect().then(() => optimize());
-    </div>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">
-                <!-- <svg class="logo-svg" viewBox="0 0 50 50" width="30" height="30">
-                    <polygon points="25,5 45,15 45,35 25,45 5,35 5,15" fill="none" stroke="#2563EB" stroke-width="3"/>
-                    <text x="50%" y="65%" fill="#FFFFFF" font-family="'Inter', sans-serif" font-weight="800" font-size="20" text-anchor="middle">M</text>
-                </svg> -->
-                Suryaa<span>.dev</span>
-            </a>
+    <header class="navbar">
+        <nav class="nav-container" aria-label="Primary">
+            <a href="#home" class="nav-logo">Suryaa<span>.dev</span></a>
 
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="#resume" class="nav-link"><i class="fas fa-file-alt"></i> Resume</a></li>
-                <li><a href="#projects" class="nav-link"><i class="fas fa-code-branch"></i> Projects</a></li>
-                <li><a href="#certificates" class="nav-link"><i class="fas fa-award"></i> Certificates</a></li>
-                <li><a href="#contact" class="nav-link"><i class="fas fa-paper-plane"></i> Contact</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#resume" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
 
             <div class="nav-actions">
-                <a href="https://github.com/muhammamdsurya" target="_blank" class="nav-icon-link" aria-label="GitHub"><i
-                        class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/muhammadsurya281202/" target="_blank" class="nav-icon-link"
-                    aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <button class="hamburger" id="hamburger" aria-label="Menu">
+                <a href="https://github.com/muhammamdsurya" target="_blank" rel="noopener" class="nav-icon-link"
+                    aria-label="GitHub"><i class="ph-light ph-github-logo"></i></a>
+                <a href="https://www.linkedin.com/in/muhammadsurya281202/" target="_blank" rel="noopener"
+                    class="nav-icon-link" aria-label="LinkedIn"><i class="ph-light ph-linkedin-logo"></i></a>
+                <button class="hamburger" id="hamburger" aria-label="Menu" aria-controls="nav-menu"
+                    aria-expanded="false">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </button>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container hero-wrapper">
-            <div class="hero-content reveal">
-                <div class="status-badge">
-                    <span class="pulse-dot"></span> Available for Freelance & Full-time
+    <main id="main">
+        <!-- Hero -->
+        <section id="home" class="hero">
+            <canvas id="hero-canvas" aria-hidden="true"></canvas>
+            <div class="container hero-wrapper">
+                <div class="hero-content reveal">
+                    <p class="hero-kicker">Hi, I'm Muhammad Surya Rusfauzi</p>
+                    <h1 class="hero-title">Turning raw data into <span>decisions</span>.</h1>
+                    <p class="hero-job">Business Intelligence · Data Engineering · Software Development</p>
+                    <p class="hero-text">
+                        BI Developer &amp; Analyst at Inti Data Utama, backed by 5+ years of building web apps with
+                        Laravel and React. I design ETL pipelines, model messy operational data, and ship dashboards
+                        that teams rely on to make decisions.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">See my work
+                            <span class="btn-icon"><i class="ph-light ph-arrow-right"></i></span></a>
+                        <a href="CV_MuhammadSuryaRusfauzi.pdf" download class="btn-text-link">
+                            <i class="ph-light ph-download-simple"></i> Download CV</a>
+                    </div>
                 </div>
-                <h1 class="hero-title">Hi, I am <span>Muhammad Surya Rusfauzi</span></h1>
-                <h2 class="hero-job">Software Developer & Data Analyst</h2>
-                <p class="hero-text">
-                    5+ years of experience building responsive web applications using React JS and Laravel. Currently
-                    managing and analyzing
-                    data at Wings Group, combining logical software engineering with sharp analytics to optimize
-                    business efficiency.
-                </p>
 
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary"><i class="fas fa-project-diagram"></i> Explore
-                        Projects</a>
-                    <a href="#contact" class="btn btn-outline"><i class="fas fa-comments"></i> Hire Me</a>
+                <div class="hero-visual reveal">
+                    <div class="portrait-stage" id="portrait-stage">
+                        <div class="portrait-tilt">
+                            <div class="portrait-shell">
+                                <div class="portrait-core">
+                                    <img src="img/photo.jpeg" alt="Portrait of Muhammad Surya Rusfauzi"
+                                        class="portrait">
+                                    <span class="portrait-glare" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pipeline-chip" aria-hidden="true">
+                        <span>extract</span><i class="ph-light ph-arrow-right"></i>
+                        <span>transform</span><i class="ph-light ph-arrow-right"></i>
+                        <span>load</span><i class="ph-light ph-arrow-right"></i>
+                        <span class="is-accent">insight</span>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="hero-image-container reveal">
-                <div class="profile-glow-wrapper">
-                    <!-- Advanced Cyber Avatar Portrait SVG Placeholder -->
-                    <img src="photo.jpeg" alt="Cyber Avatar" class="profile-avatar">
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- About -->
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="eyebrow">01 · About</span>
+                    <h2 class="section-title">Software engineer, now building with data</h2>
+                </header>
 
-    <!-- About Section -->
-    <section id="about" class="about section-padding">
-        <div class="container">
-            <div class="section-header text-center reveal">
-                <h2 class="section-title"><i class="fas fa-user-astronaut"></i> About Me</h2>
-                <div class="title-line"></div>
-            </div>
-
-            <div class="about-wrapper">
-                <div class="about-content reveal">
-                    <div class="terminal-box">
+                <div class="about-wrapper">
+                    <div class="terminal-box reveal">
                         <div class="terminal-header">
-                            <span class="t-dot red"></span>
-                            <span class="t-dot yellow"></span>
-                            <span class="t-dot green"></span>
-                            <span class="t-title">surya_bio.sh</span>
+                            <span class="t-dot"></span>
+                            <span class="t-dot"></span>
+                            <span class="t-dot"></span>
+                            <span class="t-title">surya@data: ~</span>
                         </div>
                         <div class="terminal-body">
-                            <p class="t-line"><span class="t-prompt">suryaa@dev:~$</span> cat summary.txt</p>
-                            <p class="t-text">Focusing on Web Development and Data Analytics.
-                                I have proven real-world experience as a corporate Data Administrator and a freelance
-                                Software Developer. I help businesses build robust web applications, optimize databases,
-                                and transform raw data into actionable insights.</p>
-                            <p class="t-line"><span class="t-prompt">suryaa@dev:~$</span> systemctl status core-skills
-                            </p>
-                            <p class="t-text text-success">● Active: Currently working as a data administrator and
-                                analyst at Wings Group and as a freelance full stack developer.</p>
+                            <p class="t-line"><span class="t-prompt">surya@data:~$</span> cat summary.md</p>
+                            <p class="t-text">Software developer by training, data person by choice. After years of
+                                building web apps for clients, I moved into corporate data work at Wings Group,
+                                automating reporting and cleaning up the data behind it. Today I build BI solutions at
+                                Inti Data Utama, and still take on selected builds through Ayrus Digital.</p>
+                            <p class="t-line"><span class="t-prompt">surya@data:~$</span> ls ./focus</p>
+                            <p class="t-text t-dirs"><span>data-analysis/</span> <span>etl-pipelines/</span>
+                                <span>bi-dashboards/</span> <span>business-analysis/</span></p>
                         </div>
                     </div>
-                </div>
 
-                <div class="about-stats">
-                    <div class="stat-card reveal">
-                        <div class="stat-icon-wrapper blue-glow"><i class="fas fa-clock"></i></div>
-                        <h3 class="stat-number">5+</h3>
-                        <p class="stat-label">Years Experience</p>
-                    </div>
-                    <div class="stat-card reveal">
-                        <div class="stat-icon-wrapper purple-glow"><i class="fas fa-cubes"></i></div>
-                        <h3 class="stat-number">20+</h3>
-                        <p class="stat-label">Projects & Clients</p>
-                    </div>
-                    <div class="stat-card reveal">
-                        <div class="stat-icon-wrapper green-glow"><i class="fas fa-shield-alt"></i></div>
-                        <h3 class="stat-number">15+</h3>
-                        <p class="stat-label">Certificates Validated</p>
+                    <div class="about-stats">
+                        <div class="stat-card reveal">
+                            <span class="stat-number">5+</span>
+                            <p class="stat-label">Years building software</p>
+                        </div>
+                        <div class="stat-card reveal">
+                            <span class="stat-number">50%</span>
+                            <p class="stat-label">Faster reporting turnaround at Wings Group</p>
+                        </div>
+                        <div class="stat-card reveal">
+                            <span class="stat-number">20+</span>
+                            <p class="stat-label">Projects shipped for clients</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section-padding">
-        <div class="container">
-            <div class="section-header text-center reveal">
-                <h2 class="section-title"><i class="fas fa-history"></i> Journey & Skills</h2>
-                <div class="title-line"></div>
-            </div>
+        <!-- Experience, education & skills -->
+        <section id="resume" class="resume section-padding">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="eyebrow">02 · Experience</span>
+                    <h2 class="section-title">Experience &amp; education</h2>
+                </header>
 
-            <div class="resume-grid">
-                <!-- Education Timeline Nodes -->
-                <div class="resume-column reveal">
-                    <h3 class="resume-toggle-title"><i class="fas fa-graduation-cap"></i> Education Nodes</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot stage-1"></div>
-                            <div class="timeline-date">2021 - Currently</div>
-                            <h4 class="timeline-title">Bachelor's Degree in Information Technology</h4>
-                            <p class="timeline-institution">Universitas Singaperbangsa Karawang</p>
-                            <p class="timeline-desc">Main focus: Software Engineering, Relational & NoSQL Database
-                                Optimization, Cloud Architecture Fundamentals, Data analysis</p>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot stage-1"></div>
-                            <div class="timeline-date">Aug 2023 - Des 2023</div>
-                            <h4 class="timeline-title">Mobile Development Participant</h4>
-                            <p class="timeline-institution">Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka
-                            </p>
-                            <p class="timeline-desc">Main focus: Software Engineering, Rest APIs, Cloud Architecture
-                                Fundamentals, Android Development</p>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot stage-1"></div>
-                            <div class="timeline-date">2018 - 2021</div>
-                            <h4 class="timeline-title">Science & Mathematics</h4>
-                            <p class="timeline-institution">SMAN 9 Kota Bekasi</p>
-                            <p class="timeline-desc">Main focus: Science & Mathematics, Academic</p>
-                        </div>
+                <div class="resume-grid">
+                    <div class="resume-column reveal">
+                        <h3 class="resume-toggle-title"><i class="ph-light ph-briefcase"></i> Experience</h3>
+                        <ol class="timeline">
+                            <li class="timeline-item is-current">
+                                <div class="timeline-date">Jun 2026 – Present</div>
+                                <h4 class="timeline-title">Business Intelligence Developer &amp; Analyst</h4>
+                                <p class="timeline-institution">Inti Data Utama · South Jakarta</p>
+                                <ul class="timeline-list">
+                                    <li>Build data models and ETL workflows that turn raw operational data into a
+                                        clean, trusted reporting layer.</li>
+                                    <li>Develop Power BI dashboards and KPI reports, translating stakeholder questions
+                                        into clear metrics.</li>
+                                    <li>Work with business users to define requirements and metric logic, then validate
+                                        the numbers before release.</li>
+                                </ul>
+                            </li>
+                            <li class="timeline-item is-current">
+                                <div class="timeline-date">Jan 2021 – Present</div>
+                                <h4 class="timeline-title">Founder &amp; Full-Stack Developer</h4>
+                                <p class="timeline-institution">Ayrus Digital Indonesia · Jakarta</p>
+                                <ul class="timeline-list">
+                                    <li>Founded and run 3-person software studio team, owning
+                                        strategy, client acquisition, and delivery.</li>
+                                    <li>Lead development of web and Android products on React and Laravel, including
+                                        the live SaaS products KaselaPOS and AutoJobs.</li>
+                                    <li>Plan scope, schedules, and team workload, keeping client projects at 100%
+                                        on-time delivery.</li>
+                                </ul>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-date">Jun 2025 – Jun 2026</div>
+                                <h4 class="timeline-title">Data Administrator</h4>
+                                <p class="timeline-institution">PT. Bumi Alam Segar (Wings Group) · Bekasi</p>
+                                <ul class="timeline-list">
+                                    <li>Replaced manual reporting with Power BI and Looker Studio dashboards, cutting
+                                        reporting turnaround by 50%.</li>
+                                    <li>Automated manual data entry with AI-assisted workflows, removing a recurring
+                                        bottleneck and reducing input errors.</li>
+                                    <li>Ran recurring data cleaning and extraction across operational databases, and
+                                        built a control system for leave and overtime records.</li>
+                                    <li>Analyzed Purchase Request and Engineering Job Order logs to surface efficiency
+                                        gaps across divisions.</li>
+                                </ul>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-date">Jun 2024 – Oct 2024</div>
+                                <h4 class="timeline-title">IT Project Manager</h4>
+                                <p class="timeline-institution">Resi's Project (akuanalis.com) · Bekasi</p>
+                                <ul class="timeline-list">
+                                    <li>Led the full SDLC for akuanalis.com, from scoping and planning to production
+                                        release.</li>
+                                    <li>Set realistic milestones and an agile workflow that kept every deliverable on
+                                        schedule.</li>
+                                    <li>Built React front-end features with a focus on load speed and responsive UX.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-date">Aug 2023 – Dec 2023</div>
+                                <h4 class="timeline-title">Mobile Development Participant</h4>
+                                <p class="timeline-institution">Bangkit Academy led by Google, Tokopedia, Gojek &amp;
+                                    Traveloka</p>
+                                <ul class="timeline-list">
+                                    <li>Completed an intensive Android track covering Kotlin, Android Studio, and
+                                        Flutter.</li>
+                                    <li>Shipped a capstone app with Machine Learning and Cloud Computing teammates,
+                                        combining a mobile UI, an ML model, and a cloud backend.</li>
+                                </ul>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-date">Dec 2021 – Apr 2022</div>
+                                <h4 class="timeline-title">Web Development Intern</h4>
+                                <p class="timeline-institution">GoTo Logistics · Bekasi</p>
+                                <ul class="timeline-list">
+                                    <li>Contributed to a large-scale Warehouse Management System, optimizing core
+                                        features and performance.</li>
+                                    <li>Built end-to-end features with Laravel and React, from database queries to UI.
+                                    </li>
+                                    <li>Debugged and integrated new features within an established production codebase.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
                     </div>
+
+                    <aside class="resume-column resume-aside reveal">
+                        <h3 class="resume-toggle-title"><i class="ph-light ph-graduation-cap"></i> Education</h3>
+                        <ol class="timeline">
+                            <li class="timeline-item">
+                                <div class="timeline-date">2021 – 2026</div>
+                                <h4 class="timeline-title">Bachelor of Informatics Engineering</h4>
+                                <p class="timeline-institution">Universitas Singaperbangsa Karawang</p>
+                                <p class="timeline-desc">Applied data structures and database design to real projects,
+                                    from full-stack web apps to industrial-scale data management systems.</p>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-date">2018 – 2021</div>
+                                <h4 class="timeline-title">Science &amp; Mathematics</h4>
+                                <p class="timeline-institution">SMAN 9 Kota Bekasi</p>
+                            </li>
+                        </ol>
+                        <a href="CV_MuhammadSuryaRusfauzi.pdf" download class="btn btn-primary btn-cv">Download CV
+                            <span class="btn-icon"><i class="ph-light ph-download-simple"></i></span></a>
+                    </aside>
                 </div>
 
-                <!-- Experience Timeline Nodes -->
-                <div class="resume-column reveal">
-                    <h3 class="resume-toggle-title"><i class="fas fa-network-wired"></i> Experience Milestones</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot stage-2"></div>
-                            <div class="timeline-date">Jun 2025 - Present</div>
-                            <h4 class="timeline-title">Data Analyst & Administrator</h4>
-                            <p class="timeline-institution">PT. Bumi Alam Segar (Wings Group)</p>
-                            <ul class="timeline-list">
-                                <li>Automating manual data reporting by creating interactive dashboards (Power BI &
-                                    Looker Studio), presenting real-time business insights to facilitate strategic
-                                    management decisions.</li>
-                                <li>Conducting periodic data cleaning and data retrieval processes to ensure all company
-                                    operational databases are accurate, consistent, and analysis-ready.</li>
-                                <li>Managing employee data (leave, overtime, etc.) efficiently through an optimized
-                                    control system, ensuring high data accuracy and minimizing the risk of input errors.
-                                </li>
-                                <li>Analyzing project operational data trends (including Purchase Request & Engineering
-                                    Job Order logs) and transforming raw data into actionable information to evaluate
-                                    cross-divisional work efficiency.</li>
+                <div class="skills-section">
+                    <h3 class="skills-title-main reveal">Core technical infrastructure &amp; tools</h3>
+                    <div class="skills-groups">
+                        <div class="skill-group is-data reveal">
+                            <h4><i class="ph-light ph-chart-bar"></i> Data analysis &amp; BI</h4>
+                            <ul class="skill-list">
+                                <li><i class="ph-light ph-file-sql"></i> SQL</li>
+                                <li><i class="ph-light ph-chart-bar"></i> Power BI</li>
+                                <li><i class="ph-light ph-function"></i> DAX</li>
+                                <li><i class="ph-light ph-funnel"></i> Power Query</li>
+                                <li><i class="ph-light ph-chart-pie-slice"></i> Looker Studio</li>
+                                <li><i class="ph-light ph-microsoft-excel-logo"></i> Advanced Excel</li>
+                                <li><i class="ph-light ph-google-logo"></i> Sheets &amp; Apps Script</li>
+                                <li><i class="ph-light ph-sigma"></i> SPSS</li>
                             </ul>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot stage-2"></div>
-                            <div class="timeline-date">Jan 2021 - Present</div>
-                            <h4 class="timeline-title">Founder & Full-Stack Developer</h4>
-                            <p class="timeline-institution">CodeHive Sotware Agency</p>
-                            <ul class="timeline-list">
-                                <li>Founded and developed CodeHive agency with 3 team members, fully responsible for
-                                    business strategy, team management, promotion, and service portfolio expansion.</li>
-                                <li>Act as Lead Developer in executing website and Android application creation projects
-                                    using a combination of React JS (Frontend) and Laravel (Backend) technologies.</li>
-                                <li>Manage project scheduling and team workload allocation, ensuring the entire software
-                                    development timeline runs efficiently and is delivered as agreed with the client.
-                                </li>
+                        <div class="skill-group is-data reveal">
+                            <h4><i class="ph-light ph-flow-arrow"></i> Data engineering &amp; ETL</h4>
+                            <ul class="skill-list">
+                                <li><i class="ph-light ph-file-py"></i> Python</li>
+                                <li><i class="ph-light ph-table"></i> Pandas</li>
+                                <li><i class="ph-light ph-flow-arrow"></i> ETL pipelines</li>
+                                <li><i class="ph-light ph-tree-structure"></i> Data modeling</li>
+                                <li><i class="ph-light ph-hard-drives"></i> SAP HANA DB</li>
+                                <li><i class="ph-light ph-shuffle"></i> SSIS</li>
+                                <li><i class="ph-light ph-database"></i> SQL Server</li>
+                                <li><i class="ph-light ph-database"></i> PostgreSQL</li>
+                                <li><i class="ph-light ph-database"></i> MySQL</li>
+                                <li><i class="ph-light ph-database"></i> MongoDB</li>
+                                <li><i class="ph-light ph-cloud"></i> BigQuery</li>
                             </ul>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot stage-2"></div>
-                            <div class="timeline-date">Jun 2024 - Okt 2024</div>
-                            <h4 class="timeline-title">IT Project Manager</h4>
-                            <p class="timeline-institution">Resi's Project</p>
-                            <ul class="timeline-list">
-                                <li>Leading the implementation of SDLC (Software Development Life Cycle) from the
-                                    initial stage to release, ensuring that the entire akuanalis.com platform
-                                    development process runs in a structured, efficient manner, and in accordance with
-                                    industry standards.</li>
-                                <li>Optimizing team productivity and collaboration through realistic scheduling and
-                                    workflow management, successfully keeping projects running on time (on-time
-                                    delivery).</li>
-                                <li>Actively contribute to frontend development using React JS, ensuring web
-                                    applications have high performance, responsive interfaces, and optimal user
-                                    experience (UX).</li>
+                        <div class="skill-group reveal">
+                            <h4><i class="ph-light ph-code"></i> Software engineering</h4>
+                            <ul class="skill-list">
+                                <li><i class="ph-light ph-brackets-curly"></i> Laravel &amp; PHP</li>
+                                <li><i class="ph-light ph-atom"></i> React</li>
+                                <li><i class="ph-light ph-app-window"></i> Next.js</li>
+                                <li><i class="ph-light ph-file-js"></i> JavaScript</li>
+                                <li><i class="ph-light ph-file-ts"></i> TypeScript</li>
+                                <li><i class="ph-light ph-terminal-window"></i> Node.js</li>
+                                <li><i class="ph-light ph-file-css"></i> TailwindCSS</li>
+                                <li><i class="ph-light ph-file-html"></i> HTML &amp; CSS</li>
+                                <li><i class="ph-light ph-android-logo"></i> Kotlin &amp; Flutter</li>
                             </ul>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot stage-2"></div>
-                            <div class="timeline-date">Aug 2023 - Dec 2023</div>
-                            <h4 class="timeline-title">Mobile Development Participant</h4>
-                            <p class="timeline-institution">Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka
-                            </p>
-                            <ul class="timeline-list">
-                                <li>Learning industry-standard mobile application development competencies by delving
-                                    into programming using Android Studio, Kotlin, and Flutter.</li>
-                                <li>Collaborate in a cross-functional team with colleagues from the Machine Learning and
-                                    Cloud Computing tracks to design and execute a final project (Capstone Project).
-                                </li>
-                                <li>Successfully built and integrated a ready-to-use application that combines 3 key
-                                    technology elements: a responsive mobile interface, implementation of artificial
-                                    intelligence (Machine Learning) models, and a Cloud-based architecture</li>
-                            </ul>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot stage-2"></div>
-                            <div class="timeline-date">Dec 2021 - Apr 2022</div>
-                            <h4 class="timeline-title">Web Development Intern</h4>
-                            <p class="timeline-institution">GoTo Logistics</p>
-                            <ul class="timeline-list">
-                                <li>Contributed to the development of WMS (Warehouse Management System) project, a
-                                    large-scale warehouse management system, with a focus on optimizing application
-                                    features and performance. </li>
-                                <li>Implementing end-to-end technical solutions using a combination of Laravel for
-                                    backend and database management, and React JS for building responsive (frontend)
-                                    interfaces.
-                                </li>
-                                <li>Collaborate in a dynamic engineering environment, adapt to industry-standard code
-                                    architectures, and assist teams in debugging and integrating new features.</li>
+                        <div class="skill-group reveal">
+                            <h4><i class="ph-light ph-git-branch"></i> Tooling &amp; delivery</h4>
+                            <ul class="skill-list">
+                                <li><i class="ph-light ph-git-branch"></i> Git</li>
+                                <li><i class="ph-light ph-github-logo"></i> GitHub Actions</li>
+                                <li><i class="ph-light ph-cube"></i> Docker</li>
+                                <li><i class="ph-light ph-linux-logo"></i> Ubuntu Server</li>
+                                <li><i class="ph-light ph-kanban"></i> Jira &amp; Trello</li>
+                                <li><i class="ph-light ph-arrows-clockwise"></i> Agile / Scrum</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Tech Skills Group Grid with Badges -->
-            <div class="skills-section reveal">
-                <h3 class="skills-title-main text-center">Core Technical Infrastructure & Tools</h3>
+        <!-- Projects: each card holds its case study; js/script.js shows it in #case-study -->
+        <section id="projects" class="projects section-padding">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="eyebrow">03 · Projects</span>
+                    <h2 class="section-title">Featured projects</h2>
+                    <p class="section-lead">Production apps I designed and built. Most are data problems underneath:
+                        syncing, queuing, scheduling, and reporting. Open any project for the full case study.</p>
+                </header>
 
-                <!-- Semua icon digabung dalam satu container tanpa pembatas kategori -->
-                <div class="skills-flat-container">
-                    <span class="tag-html"><i class="fab fa-html5"></i> HTML5</span>
-                    <span class="tag-css"><i class="fab fa-css3-alt"></i> CSS3</span>
-                    <span class="tag-js"><i class="fab fa-js"></i> JavaScript</span>
-                    <span class="tag-tailwind"><i class="fab fa-css3"></i> TailwindCSS</span>
-                    <span class="tag-react"><i class="fab fa-react"></i> React JS</span>
-                    <span class="tag-php"><i class="fab fa-php"></i> PHP Architecture</span>
-                    <span class="tag-laravel"><i class="fab fa-laravel"></i> Laravel Framework</span>
-                    <span class="tag-node"><i class="fab fa-node-js"></i> Node.js</span>
-                    <span class="tag-mysql"><i class="fas fa-database"></i> MySQL</span>
-                    <span class="tag-postgres"><i class="fas fa-database"></i> PostgreSQL</span>
-                    <span class="tag-mongo"><i class="fas fa-leaf"></i> MongoDB</span>
-                    <span class="tag-git"><i class="fab fa-git-alt"></i> Git Protocol</span>
-                    <span class="tag-github"><i class="fab fa-github"></i> GitHub Actions</span>
-                    <span class="tag-docker"><i class="fab fa-docker"></i> Containerization</span>
-                    <span class="tag-excel"><i class="fas fa-file-excel"></i> Excel</span>
-                    <span class="tag-appscript"><i class="fas fa-laptop-code"></i> Apps Script</span>
-                    <span class="tag-powerbi"><i class="fas fa-chart-bar"></i> Power BI</span>
-                    <span class="tag-spss"><i class="fas fa-chart-line"></i> SPSS</span>
-                </div>
-            </div>
-
-            <div class="text-center reveal" style="margin-top: 50px;">
-                <a href="CV_MuhammadSuryaRusfauzi.pdf" download class="btn btn-primary btn-cv glow-blue-button">
-                    <i class="fas fa-cloud-download-alt"></i> Download Verified CV
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section with custom high fidelity inline SVGs representing applications -->
-    <section id="projects" class="projects section-padding">
-        <div class="container">
-            <div class="section-header text-center reveal">
-                <h2 class="section-title"><i class="fas fa-laptop-code"></i> Featured Projects</h2>
-                <div class="title-line"></div>
-            </div>
-
-            <div class="project-grid">
-                <!-- Project 1: LuxeShop -->
-                <div class="project-card reveal">
-                    <div class="project-img-wrapper cursor-pointer gallery-trigger"
-                        data-images="nnrooms.png, nnrooms-2.png, nnrooms-3.png, nnrooms-4.png">
-
-                        <img src="nnrooms.png" alt="NNRooms Web App">
-                        <div class="project-overlay-glow"></div>
-                    </div>
-
-                    <div class="project-info">
-                        <h3 class="project-name">NNRooms Web App</h3>
-                        <p class="project-desc">NNRooms is a web-based platform built with Laravel, designed to
-                            streamline and automate the process of apartment rental management. This application
-                            provides an all-in-one solution for property owners to manage their listings and for tenants
-                            to rent rooms seamlessly.</p>
-                        <div class="project-tech">
-                            <span>Laravel</span><span>PostgreSQL</span><span>TailwindCSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/muhammamdsurya/NNRooms" class="proj-link">
-                                <i class="fab fa-github"></i> Source
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card reveal">
-                    <div class="project-img-wrapper cursor-pointer gallery-trigger"
-                        data-images="basecamp.png, basecamp-2.png, basecamp-3.png">
-
-                        <img src="basecamp.png" alt="Basecamp Web App">
-                        <div class="project-overlay-glow"></div>
-                    </div>
-
-                    <div class="project-info">
-                        <h3 class="project-name">Basecamp Web App</h3>
-                        <p class="project-desc">Basecamp Web App is a comprehensive web application designed to
-                            streamline sports field reservations and facility management. It eliminates manual
-                            scheduling hassles by providing an automated, real-time booking ecosystem for both field
-                            owners and customers.</p>
-                        <div class="project-tech">
-                            <span>Laravel</span><span>MySQL</span><span>Filament</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/muhammamdsurya/basecamp" class="proj-link">
-                                <i class="fab fa-github"></i> Source
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card reveal">
-                    <div class="project-img-wrapper cursor-pointer gallery-trigger">
-                        <img src="akuanalis.png" alt="Akuanalis" class="gallery-trigger"
-                            data-images="akuanalis.png, akuanalis-2.png, akuanalis-3.png, akuanalis-4.png">
-                        <div class="project-overlay-glow"></div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-name">Akuanalis.com</h3>
-                        <p class="project-desc">akuanalis.com is a specialized e-learning and e-commerce platform
-                            dedicated to selling and delivering online chemistry courses. The application leverages a
-                            hybrid architecture of Laravel and Golang to provide a high-performance, secure, and
-                            scalable user experience.</p>
-                        <div class="project-tech">
-                            <span>Laravel</span><span>PostgreSQL</span><span>Jquery</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="akuanalis.com" class="proj-link"><i class="fab fa-github"></i> Source</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="galleryModal" class="gallery-modal">
-                    <span class="close-modal">&times;</span>
-                    <button class="prev-btn">&#10094;</button>
-                    <div class="modal-content-wrapper">
-                        <img class="modal-content" id="modalImg">
-                    </div>
-                    <button class="next-btn">&#10095;</button>
-                </div>
-                <div class="project-card reveal">
-                    <div class="project-img-wrapper cursor-pointer gallery-trigger"
-                        data-images="linkco-4.jpeg, linkco-2.jpeg, linkco-3.jpeg, linkco.jpeg">
-
-                        <img src="linkco-4.jpeg" alt="Linkco">
-                        <div class="project-overlay-glow"></div>
-                    </div>
-
-                    <div class="project-info">
-                        <h3 class="project-name">Linkco</h3>
-                        <p class="project-desc">LinkCo is a community platform designed for the mutual sharing of
-                            benefits among communities, utilizing a referral-based scheme. Our core service is online
-                            food delivery, connecting customers, merchants, and drivers.</p>
-                        <div class="project-tech">
-                            <span>Kotlin</span><span>Rest APIs</span><span>Technical Writing</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/muhammamdsurya/NuTrace" class="proj-link">
-                                <i class="fab fa-github"></i> Source
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card reveal">
-                    <div class="project-img-wrapper cursor-pointer gallery-trigger"
-                        data-images="laundry.png, laundry-2.png, laundry-3.png, laundry-4.png">
-
-                        <img src="laundry.png" alt="Laundry App">
-                        <div class="project-overlay-glow"></div>
-                    </div>
-
-                    <div class="project-info">
-                        <h3 class="project-name">Laundry-App</h3>
-                        <p class="project-desc">Developed a dual-sided web application designed to streamline on-demand
-                            laundry booking for customers and automate day-to-day operational management for laundry
-                            administrators.</p>
-                        <div class="project-tech">
-                            <span>CodeIgniter</span><span>MySQL</span><span>Bootstrap</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/muhammamdsurya/laundry-app" class="proj-link">
-                                <i class="fab fa-github"></i> Source
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card reveal">
-                    <div class="project-img-wrapper cursor-pointer gallery-trigger"
-                        data-images="wms.png, wms-2.png, wms-3.png, wms-4.png">
-
-                        <img src="wms.png" alt="WMS System">
-                        <div class="project-overlay-glow"></div>
-                    </div>
-
-                    <div class="project-info">
-                        <h3 class="project-name">WMS System</h3>
-                        <p class="project-desc">A WMS (Warehouse Management System) for managing goods data across
-                            inbound, inventory, and outbound processes. the system supports multiple users and
-                            multi-level authorization.</p>
-                        <div class="project-tech">
-                            <span>Laravel</span><span>PostgreSQL</span><span>Livewire</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/muhammamdsurya/wms-dmx" class="proj-link">
-                                <i class="fab fa-github"></i> Source
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certificates Section with Embossed Medallion Badges SVGs -->
-    <section id="certificates" class="certificates section-padding">
-        <div class="container">
-            <div class="section-header text-center reveal">
-                <h2 class="section-title"><i class="fas fa-medal"></i> Verified Badges & Certifications</h2>
-                <div class="title-line"></div>
-            </div>
-
-            <div class="certificate-grid">
-                <!-- Cert 1 -->
-
-                <div class="cert-card reveal">
-                    <div class="cert-icon-box">
-                        <!-- Circular Digital Security Badge/Stamp SVG -->
-                    </div>
-                    <div class="cert-info">
-                        <h3 class="cert-name">Junior Web Developer</h3>
-                        <p class="cert-issuer">Badan Nasional Sertifikasi Profesi (BNSP)</p>
-                        <p class="cert-year">ID Validation: TIK.317.05868 2021</p>
-                        <a href="https://drive.google.com/file/d/1tjke2FVRPpjihh0NpfT5oyIHVUcadtFY/view?usp=sharing"
-                            target="_blank" class="cert-btn">Cerificate <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-
-                <div class="cert-card reveal">
-                    <div class="cert-icon-box">
-                        <!-- Circular Digital Security Badge/Stamp SVG -->
-                    </div>
-                    <div class="cert-info">
-                        <h3 class="cert-name">Junior Web Developer (Vocational School Graduate Academy)</h3>
-                        <p class="cert-issuer">Digital Talent Scholarship</p>
-                        <p class="cert-year">ID Validation: 1937037860-14</p>
-                        <a href="https://digitalent.kominfo.go.id/cek-sertifikat" target="_blank"
-                            class="cert-btn">Cerificate <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-
-                <!-- Cert 2 -->
-                <div class="cert-card reveal">
-                    <div class="cert-icon-box">
-                        <!-- AWS style circle technology badge SVG -->
-                    </div>
-                    <div class="cert-info">
-                        <h3 class="cert-name">Belajar Dasar Git dengan GitHub</h3>
-                        <p class="cert-issuer">Dicoding Indonesia</p>
-                        <p class="cert-year">ID Validation: KEXL0R2W0PG2</p>
-                        <a href="https://www.dicoding.com/certificates/KEXL0R2W0PG2" target="_blank"
-                            class="cert-btn">Certificate <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-
-                <div class="cert-card reveal">
-                    <div class="cert-icon-box">
-                        <!-- AWS style circle technology badge SVG -->
-                    </div>
-                    <div class="cert-info">
-                        <h3 class="cert-name">Laravel Course</h3>
-                        <p class="cert-issuer">Harisenin.com</p>
-                        <p class="cert-year">ID Validation: </p>
-                        <a href="https://drive.google.com/file/d/1xlmI23EQtjyg_namrPdqSVlaggf7yasa/view?usp=sharing"
-                            target="_blank" class="cert-btn">Certificate <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-
-                <div class="cert-card reveal">
-                    <div class="cert-icon-box">
-                        <!-- AWS style circle technology badge SVG -->
-                    </div>
-                    <div class="cert-info">
-                        <h3 class="cert-name">Problem Solving</h3>
-                        <p class="cert-issuer">HackerRank</p>
-                        <p class="cert-year">ID Validation: </p>
-                        <a href="https://www.hackerrank.com/certificates/46358c442754" target="_blank"
-                            class="cert-btn">Certificate <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-
-                <div class="cert-card reveal">
-                    <div class="cert-icon-box">
-                        <!-- AWS style circle technology badge SVG -->
-                    </div>
-                    <div class="cert-info">
-                        <h3 class="cert-name">Fundamental SQL</h3>
-                        <p class="cert-issuer">DQLab</p>
-                        <p class="cert-year">ID Validation: </p>
-                        <a href="https://drive.google.com/file/d/16R6caKFQ4ZcZiv6_x0-G_7AfHm5CnZu7/view" target="_blank"
-                            class="cert-btn">Certificate <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section-padding">
-        <div class="container">
-            <div class="section-header text-center reveal">
-                <h2 class="section-title"><i class="fas fa-envelope-open-text"></i> Establish Network Connection</h2>
-                <div class="title-line"></div>
-            </div>
-
-            <div class="contact-grid">
-                <!-- Left Details Info Panel -->
-                <div class="contact-info-panel reveal">
-                    <h3>Let's Forge Something Grand</h3>
-                    <p>Encrypt your message below or contact me directly through my main digital communication channel
-                        hub.</p>
-
-                    <div class="info-list">
-                        <div class="info-item">
-                            <div class="info-icon icon-blue-neon"><i class="fas fa-at"></i></div>
-                            <div class="info-text">
-                                <span>Main Endpoint Email</span>
-                                <a href="mailto:muhammadsurya2812@gmail.com">muhammadsurya2812@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon icon-green-neon"><i class="fab fa-whatsapp"></i></div>
-                            <div class="info-text">
-                                <span>Secure Instant Messenger</span>
-                                <a href="https://wa.me/6285717358096" target="_blank">+62 857-1735-8096</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Custom Futuristic Network/Social Link Pills Group -->
-                    <div class="social-pills-container">
-                        <h4>Connected Grid Links</h4>
-                        <div class="pills-flex">
-                            <a href="https://github.com/muhammamdsurya" class="pill-link x-pill"><i
-                                    class="fab fa-github"></i> Github</a>
-                            <a href="https://www.linkedin.com/in/muhammadsurya281202/" class="pill-link tg-pill"><i
-                                    class="fab fa-linkedin"></i> Linkedin</a>
-                            <a href="https://www.instagram.com/muhammamdsurya/" class="pill-link ig-pill"><i
-                                    class="fab fa-instagram"></i> Instagram</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Form Panel with complete input checking loops -->
-                <div class="contact-form-panel reveal">
-                    <form action="https://api.web3forms.com/submit" method="POST" id="portfolio-contact-form"
-                        novalidate>
-                        <input type="hidden" name="access_key" value="152082b7-f4cf-4213-913c-2fcfcf821cee">
-
-                        <div class="form-group">
-                            <label for="form-name"><i class="fas fa-terminal"></i> Identity Name</label>
-                            <input type="text" id="form-name" name="name" placeholder="John Doe" required>
-                            <span class="error-msg"><i class="fas fa-exclamation-triangle"></i> Input parameter 'Name'
-                                is required.</span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="form-email"><i class="fas fa-fingerprint"></i> Email Address</label>
-                            <input type="email" id="form-email" name="email" placeholder="john@domain.com" required>
-                            <span class="error-msg"><i class="fas fa-exclamation-triangle"></i> Valid email parameter
-                                layout required.</span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="form-subject"><i class="fas fa-folder-open"></i> Packet Subject</label>
-                            <input type="text" id="form-subject" name="subject" placeholder="Project Inquiry" required>
-                            <span class="error-msg"><i class="fas fa-exclamation-triangle"></i> Subject line must not be
-                                empty.</span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="form-message"><i class="fas fa-comment-alt"></i> Message Payload Content</label>
-                            <textarea id="form-message" name="message" rows="4" placeholder="Describe requirements..."
-                                required></textarea>
-                            <span class="error-msg"><i class="fas fa-exclamation-triangle"></i> Payload string length
-                                must be > 0.</span>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary glow-blue-button" style="width: 100%;">
-                            <span class="btn-text">Send me a email</span>
-                            <span class="btn-spinner hidden"><i class="fas fa-circle-notch fa-spin"></i></span>
+                <div class="project-grid">
+                    <article class="project-card reveal"
+                        data-images="img/kaselapos.jpg, img/kaselapos-2.jpg, img/kaselapos-3.jpg, img/kaselapos-4.jpg">
+                        <button type="button" class="project-img-wrapper cs-trigger"
+                            aria-label="Open KaselaPOS case study">
+                            <img src="img/kaselapos.jpg"
+                                alt="KaselaPOS report showing revenue, net profit and a branch comparison"
+                                loading="lazy">
+                            <span class="project-zoom">Case study · 4 screenshots</span>
                         </button>
+                        <div class="project-info">
+                            <p class="project-kicker">Live SaaS · Point of sale</p>
+                            <h3 class="project-name">KaselaPOS</h3>
+                            <p class="project-desc">Offline-first cashier app for Indonesian small businesses. It keeps
+                                selling when the internet drops, then syncs and reports across every branch.</p>
+                            <div class="project-tech">
+                                <span>Laravel</span><span>Offline-first sync</span><span>Multi-branch reporting</span>
+                            </div>
+                            <div class="project-links">
+                                <button type="button" class="proj-link cs-trigger">Read case study <i
+                                        class="ph-light ph-arrow-right"></i></button>
+                                <a href="https://kaselapos.ayrusdigital.my.id/" target="_blank" rel="noopener"
+                                    class="proj-link">Live site <i class="ph-light ph-arrow-up-right"></i></a>
+                            </div>
+                            <div class="case-study" hidden>
+                                <dl class="cs-meta">
+                                    <div><dt>Role</dt><dd>Founder &amp; full-stack developer</dd></div>
+                                    <div><dt>Product</dt><dd>Live SaaS, three paid plans</dd></div>
+                                    <div><dt>For</dt><dd>Cafés, restaurants &amp; small retail</dd></div>
+                                </dl>
+                                <h4>The problem</h4>
+                                <p>Many small shops in Indonesia run on patchy internet. A typical online POS stops
+                                    taking orders the moment the connection drops, while a dedicated POS machine is
+                                    expensive and keeps the numbers locked inside the outlet. Owners often have to visit
+                                    the store just to see the day's sales.</p>
+                                <h4>What I built</h4>
+                                <ul>
+                                    <li>A browser-based cashier for any phone, tablet or laptop: no install, no special
+                                        hardware.</li>
+                                    <li>Offline mode: sales are stored on the device and sync automatically when the
+                                        connection returns, for 24 to 168 hours depending on the plan.</li>
+                                    <li>The store's own QRIS on the cashier screen, so payments go straight to the
+                                        merchant's account.</li>
+                                    <li>Inventory you can audit: stock in and out, stock opname, waste, full movement
+                                        history, and recipes that deduct raw materials on every sale.</li>
+                                    <li>Shift handover with a cash-drawer count and recorded variance, plus consolidated
+                                        reports across branches.</li>
+                                </ul>
+                                <div class="cs-highlight">
+                                    <h4>The interesting part</h4>
+                                    <p>Offline sales break naive reporting. If a sale made at 9 PM only syncs the next
+                                        morning, a report keyed on server time puts it on the wrong day. KaselaPOS
+                                        computes every report from the transaction time recorded on the device, not the
+                                        sync time, so daily revenue, net profit and branch comparisons stay correct no
+                                        matter when the data arrives. It's the same event-time vs. processing-time
+                                        problem every data pipeline has to solve.</p>
+                                </div>
+                                <h4>Outcome</h4>
+                                <p>Live in production with a 14-day free trial and three paid plans (Starter, Growth,
+                                    Pro), from a single outlet up to ten branches.</p>
+                            </div>
+                        </div>
+                    </article>
 
-                        <div class="form-alert success hidden" id="form-success-alert">
-                            <i class="fas fa-check-circle"></i> Thanks for contacting me! I'll get back to you soon.
+                    <article class="project-card reveal"
+                        data-images="img/autojobs.jpg, img/autojobs-2.jpg, img/autojobs-3.jpg, img/autojobs-4.jpg">
+                        <button type="button" class="project-img-wrapper cs-trigger"
+                            aria-label="Open AutoJobs case study">
+                            <img src="img/autojobs.jpg"
+                                alt="AutoJobs search campaign with queued, sent and failed applications"
+                                loading="lazy">
+                            <span class="project-zoom">Case study · 4 screenshots</span>
+                        </button>
+                        <div class="project-info">
+                            <p class="project-kicker">Live SaaS · Automation</p>
+                            <h3 class="project-name">AutoJobs</h3>
+                            <p class="project-desc">Job-application automation across JobStreet, Glints and LinkedIn:
+                                one search, explainable matching, queued applications, and a full report.</p>
+                            <div class="project-tech">
+                                <span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Chrome
+                                    extension</span>
+                            </div>
+                            <div class="project-links">
+                                <button type="button" class="proj-link cs-trigger">Read case study <i
+                                        class="ph-light ph-arrow-right"></i></button>
+                                <a href="https://autojobs.ayrusdigital.my.id/" target="_blank" rel="noopener"
+                                    class="proj-link">Live site <i class="ph-light ph-arrow-up-right"></i></a>
+                                <a href="https://github.com/muhammamdsurya/AutoJobs" target="_blank" rel="noopener"
+                                    class="proj-link"><i class="ph-light ph-github-logo"></i> Source</a>
+                            </div>
+                            <div class="case-study" hidden>
+                                <dl class="cs-meta">
+                                    <div><dt>Role</dt><dd>Founder &amp; full-stack developer</dd></div>
+                                    <div><dt>Product</dt><dd>Web app + browser extension</dd></div>
+                                    <div><dt>For</dt><dd>Job seekers &amp; career switchers</dd></div>
+                                </dl>
+                                <h4>The problem</h4>
+                                <p>Job hunting means doing the same work three times: retyping your profile,
+                                    re-uploading your CV and answering the same screening questions on JobStreet, Glints
+                                    and LinkedIn, while sifting through hundreds of listings that don't fit. A few weeks
+                                    in, nobody remembers where they applied.</p>
+                                <h4>What I built</h4>
+                                <ul>
+                                    <li>One search campaign across three portals, filtered by title, description
+                                        keywords, experience level and companies to avoid.</li>
+                                    <li>A mandatory preview that shows why each listing matched, or why it was filtered
+                                        out, before anything is sent.</li>
+                                    <li>A Chrome/Edge extension that fills and submits applications in the user's own
+                                        browser, reusing saved answers across portals.</li>
+                                    <li>A dry-run mode that completes every form without pressing submit.</li>
+                                    <li>A report of every attempt with proof of submission and an Excel export.</li>
+                                </ul>
+                                <div class="cs-highlight">
+                                    <h4>The interesting part</h4>
+                                    <p>PostgreSQL doubles as the job queue. Each application is claimed with
+                                        <code>FOR UPDATE SKIP LOCKED</code>, so one portal account never runs two
+                                        attempts at once, and the randomized 120–180 second gap and the 25-per-day cap
+                                        hold even with several browsers paired. The extension is a thin executor:
+                                        portal adapters, answer logic, retries and caps all live on the server, so
+                                        fixing a portal is a server deploy, not an extension update.</p>
+                                </div>
+                                <h4>The data angle</h4>
+                                <p>Underneath, it's an ETL pipeline: extract listings from three sources, normalize and
+                                    score them against the campaign's criteria with a reason for every decision, then
+                                    load the chosen ones into a queue and a report.</p>
+                                <h4>Built responsibly</h4>
+                                <p>AutoJobs never solves CAPTCHAs or 2FA and stores no portal passwords or cookies. When
+                                    a portal asks for verification, the extension brings its window forward and waits
+                                    for the user.</p>
+                            </div>
                         </div>
-                        <div class="form-alert error hidden" id="form-error-alert">
-                            <i class="fas fa-exclamation-circle"></i> Sorry, there was an error submitting the form.
-                            Please try again.
+                    </article>
+
+                    <article class="project-card reveal"
+                        data-images="img/nnrooms.png, img/nnrooms-2.png, img/nnrooms-3.png, img/nnrooms-4.png">
+                        <button type="button" class="project-img-wrapper cs-trigger"
+                            aria-label="Open NNRooms case study">
+                            <img src="img/nnrooms.png" alt="NNRooms landing page with date and duration search"
+                                loading="lazy">
+                            <span class="project-zoom">Case study · 4 screenshots</span>
+                        </button>
+                        <div class="project-info">
+                            <p class="project-kicker">Booking platform</p>
+                            <h3 class="project-name">NNRooms</h3>
+                            <p class="project-desc">Hourly apartment rental in Karawang with live slot availability,
+                                1–24 hour bookings, and online payment.</p>
+                            <div class="project-tech">
+                                <span>Laravel</span><span>PostgreSQL</span><span>TailwindCSS</span>
+                            </div>
+                            <div class="project-links">
+                                <button type="button" class="proj-link cs-trigger">Read case study <i
+                                        class="ph-light ph-arrow-right"></i></button>
+                                <a href="https://github.com/muhammamdsurya/NNRooms" target="_blank" rel="noopener"
+                                    class="proj-link"><i class="ph-light ph-github-logo"></i> Source</a>
+                            </div>
+                            <div class="case-study" hidden>
+                                <dl class="cs-meta">
+                                    <div><dt>Role</dt><dd>Full-stack developer</dd></div>
+                                    <div><dt>Product</dt><dd>Short-stay booking web app</dd></div>
+                                    <div><dt>For</dt><dd>Property owners &amp; guests</dd></div>
+                                </dl>
+                                <h4>The problem</h4>
+                                <p>Short-stay apartments in Karawang rent by the hour, not the night. Handling 1- to
+                                    24-hour bookings over chat and spreadsheets invites double bookings, and guests
+                                    can't see what's actually free.</p>
+                                <h4>What I built</h4>
+                                <ul>
+                                    <li>Search by check-in date and duration: 1, 3, 6, 8, 12 or 24 hours.</li>
+                                    <li>Room pages with facilities, ratings and guest reviews.</li>
+                                    <li>A live availability grid that marks every slot as available, booked or under
+                                        maintenance, with its price.</li>
+                                    <li>Checkout with full payment or a down payment, by bank virtual account (BCA,
+                                        Mandiri) or e-wallet (OVO, DANA).</li>
+                                </ul>
+                                <div class="cs-highlight">
+                                    <h4>The interesting part</h4>
+                                    <p>Availability is a data-modeling problem. Every booking and maintenance window is
+                                        a time range, and a slot can only be sold if it overlaps none of them, across
+                                        durations from one hour to a full day. Modeling it that way in PostgreSQL is what
+                                        keeps the availability grid accurate and double bookings out.</p>
+                                </div>
+                                <h4>Outcome</h4>
+                                <p>One place for owners to manage listings and schedules, and a self-serve flow for
+                                    guests from search to payment.</p>
+                            </div>
                         </div>
-                    </form>
+                    </article>
+
+                    <article class="project-card reveal"
+                        data-images="img/basecamp.png, img/basecamp-2.png, img/basecamp-3.png">
+                        <button type="button" class="project-img-wrapper cs-trigger"
+                            aria-label="Open Basecamp Arena case study">
+                            <img src="img/basecamp.png" alt="Basecamp Arena sports venue booking landing page"
+                                loading="lazy">
+                            <span class="project-zoom">Case study · 3 screenshots</span>
+                        </button>
+                        <div class="project-info">
+                            <p class="project-kicker">Booking platform</p>
+                            <h3 class="project-name">Basecamp Arena</h3>
+                            <p class="project-desc">Sports-venue booking for badminton, padel, tennis, futsal and more,
+                                with real-time slots and no sign-up needed.</p>
+                            <div class="project-tech">
+                                <span>Laravel</span><span>MySQL</span><span>Filament</span>
+                            </div>
+                            <div class="project-links">
+                                <button type="button" class="proj-link cs-trigger">Read case study <i
+                                        class="ph-light ph-arrow-right"></i></button>
+                                <a href="https://github.com/muhammamdsurya/basecamp-arena" target="_blank"
+                                    rel="noopener" class="proj-link"><i class="ph-light ph-github-logo"></i> Source</a>
+                            </div>
+                            <div class="case-study" hidden>
+                                <dl class="cs-meta">
+                                    <div><dt>Role</dt><dd>Full-stack developer</dd></div>
+                                    <div><dt>Product</dt><dd>Venue booking + admin panel</dd></div>
+                                    <div><dt>For</dt><dd>Venue owners &amp; players</dd></div>
+                                </dl>
+                                <h4>The problem</h4>
+                                <p>Sports venues still take bookings by phone and WhatsApp. Owners juggle schedules by
+                                    hand, and players can't tell which courts are free without asking first.</p>
+                                <h4>What I built</h4>
+                                <ul>
+                                    <li>A catalog of venues (badminton, padel, pickleball, tennis, squash, futsal, golf)
+                                        with hourly prices.</li>
+                                    <li>A slot picker that shows every hour as ready, taken, pending, under repair or
+                                        selected.</li>
+                                    <li>Guest booking with no account required, confirmed on WhatsApp after payment.
+                                    </li>
+                                    <li>A Filament admin panel where owners manage courts, prices and schedules.</li>
+                                </ul>
+                                <div class="cs-highlight">
+                                    <h4>The interesting part</h4>
+                                    <p>Dropping the login removes friction, but it also removes identity. The schedule
+                                        compensates with explicit slot states: an hour waiting on payment is held as
+                                        pending instead of being sold twice, and courts under repair simply drop out of
+                                        the grid.</p>
+                                </div>
+                                <h4>Outcome</h4>
+                                <p>Players book on their own, and owners run a single schedule instead of a chat
+                                    thread.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal"
+                        data-images="img/akuanalis.png, img/akuanalis-2.png, img/akuanalis-3.png, img/akuanalis-4.png">
+                        <button type="button" class="project-img-wrapper cs-trigger"
+                            aria-label="Open Akuanalis case study">
+                            <img src="img/akuanalis.png" alt="Akuanalis chemistry e-learning landing page"
+                                loading="lazy">
+                            <span class="project-zoom">Case study · 4 screenshots</span>
+                        </button>
+                        <div class="project-info">
+                            <p class="project-kicker">E-learning · E-commerce</p>
+                            <h3 class="project-name">Akuanalis.com</h3>
+                            <p class="project-desc">Chemistry e-learning and course marketplace with progress tracking
+                                and an AI CV-screening tool for aspiring lab analysts.</p>
+                            <div class="project-tech">
+                                <span>Laravel</span><span>Golang</span><span>PostgreSQL</span>
+                            </div>
+                            <div class="project-links">
+                                <button type="button" class="proj-link cs-trigger">Read case study <i
+                                        class="ph-light ph-arrow-right"></i></button>
+                                <a href="https://akuanalis.com" target="_blank" rel="noopener" class="proj-link">Live
+                                    site <i class="ph-light ph-arrow-up-right"></i></a>
+                            </div>
+                            <div class="case-study" hidden>
+                                <dl class="cs-meta">
+                                    <div><dt>Role</dt><dd>IT project manager &amp; front-end developer</dd></div>
+                                    <div><dt>Client</dt><dd>Resi's Project</dd></div>
+                                    <div><dt>Timeline</dt><dd>Jun – Oct 2024</dd></div>
+                                </dl>
+                                <h4>The brief</h4>
+                                <p>Resi's Project wanted to sell job-focused chemistry and lab-analyst courses online: a
+                                    storefront for classes and bundles, a protected space for paid material, and tools
+                                    that help learners land the job afterwards.</p>
+                                <h4>What we built</h4>
+                                <ul>
+                                    <li>A course catalog with single classes and bundles, from inorganic chemistry to
+                                        internship and career prep.</li>
+                                    <li>A learning dashboard with module-by-module progress, quizzes and recorded lab
+                                        sessions.</li>
+                                    <li>An AI CV-screening tool: upload a CV, enter the target position, experience and
+                                        job description, and get an analysis of the fit.</li>
+                                    <li>Transaction records for every purchase.</li>
+                                </ul>
+                                <div class="cs-highlight">
+                                    <h4>The interesting part</h4>
+                                    <p>Turning a course site into a career tool. The CV screening compares a learner's
+                                        CV with a specific job posting, so they can see their gaps before they apply.
+                                        That ties the catalog directly to the jobs it prepares people for.</p>
+                                </div>
+                                <h4>My role</h4>
+                                <p>I ran the full SDLC from scoping to release, set milestones and an agile workflow
+                                    that kept every deliverable on schedule, and built front-end features myself.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal"
+                        data-images="img/linkco-4.jpeg, img/linkco-2.jpeg, img/linkco-3.jpeg, img/linkco.jpeg">
+                        <button type="button" class="project-img-wrapper is-mobile cs-trigger"
+                            aria-label="Open Linkco case study">
+                            <img src="img/linkco-4.jpeg" alt="Linkco affiliate center with earnings and conversions"
+                                loading="lazy">
+                            <span class="project-zoom">Case study · 4 screenshots</span>
+                        </button>
+                        <div class="project-info">
+                            <p class="project-kicker">Android app · Community commerce</p>
+                            <h3 class="project-name">Linkco</h3>
+                            <p class="project-desc">Referral-driven community app for food and package delivery, with an
+                                affiliate center that tracks clicks, conversions and earnings.</p>
+                            <div class="project-tech">
+                                <span>Kotlin</span><span>REST APIs</span><span>Technical Writing</span>
+                            </div>
+                            <div class="project-links">
+                                <button type="button" class="proj-link cs-trigger">Read case study <i
+                                        class="ph-light ph-arrow-right"></i></button>
+                            </div>
+                            <div class="case-study" hidden>
+                                <dl class="cs-meta">
+                                    <div><dt>Role</dt><dd>Android developer</dd></div>
+                                    <div><dt>Product</dt><dd>Community delivery app</dd></div>
+                                    <div><dt>For</dt><dd>Customers, merchants &amp; drivers</dd></div>
+                                </dl>
+                                <h4>The idea</h4>
+                                <p>A delivery platform where the community shares in the value it creates. Members
+                                    invite friends with a referral code and earn when those friends order.</p>
+                                <h4>What I built</h4>
+                                <ul>
+                                    <li>Sign-in with email, phone or Google, with an optional referral code at sign-up.
+                                    </li>
+                                    <li>Food ordering from nearby merchants, plus package delivery with pickup and
+                                        drop-off.</li>
+                                    <li>An orders hub with search and filters for food, delivery and completed orders.
+                                    </li>
+                                    <li>An Affiliate Center with earnings, conversions and link clicks, a shareable
+                                        referral link, and withdrawals.</li>
+                                </ul>
+                                <div class="cs-highlight">
+                                    <h4>The interesting part</h4>
+                                    <p>The Affiliate Center is a small analytics product inside the app. It turns raw
+                                        referral events into a funnel members can act on (link views, then conversions,
+                                        then earnings), which only works if events are tracked cleanly across customers,
+                                        merchants and drivers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer Area with Neon highlight notes -->
+        <!-- Certificates -->
+        <section id="certificates" class="certificates section-padding">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="eyebrow">04 · Certifications</span>
+                    <h2 class="section-title">Certifications</h2>
+                </header>
+
+                <ul class="certificate-grid">
+                    <li class="cert-card reveal">
+                        <div class="cert-info">
+                            <span class="cert-tag">Data</span>
+                            <h3 class="cert-name">Advanced Excel for Data Analytics</h3>
+                            <p class="cert-issuer">Karirnex · Jan 2026</p>
+                        </div>
+                    </li>
+                    <li class="cert-card reveal">
+                        <div class="cert-info">
+                            <span class="cert-tag">Data</span>
+                            <h3 class="cert-name">Fundamental SQL</h3>
+                            <p class="cert-issuer">DQLab · Sep 2021</p>
+                        </div>
+                        <a href="https://drive.google.com/file/d/16R6caKFQ4ZcZiv6_x0-G_7AfHm5CnZu7/view"
+                            target="_blank" rel="noopener" class="cert-btn" aria-label="View Fundamental SQL certificate">View
+                            <i class="ph-light ph-arrow-up-right"></i></a>
+                    </li>
+                    <li class="cert-card reveal">
+                        <div class="cert-info">
+                            <span class="cert-tag">Data</span>
+                            <h3 class="cert-name">Python for Fundamental Data Science</h3>
+                            <p class="cert-issuer">DQLab · Sep 2021</p>
+                        </div>
+                    </li>
+                    <li class="cert-card reveal">
+                        <div class="cert-info">
+                            <h3 class="cert-name">Junior Web Developer</h3>
+                            <p class="cert-issuer">Badan Nasional Sertifikasi Profesi (BNSP) · Nov 2021</p>
+                            <p class="cert-year">ID TIK.317.05868 2021</p>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1tjke2FVRPpjihh0NpfT5oyIHVUcadtFY/view?usp=sharing"
+                            target="_blank" rel="noopener" class="cert-btn" aria-label="View BNSP certificate">View <i
+                                class="ph-light ph-arrow-up-right"></i></a>
+                    </li>
+                    <li class="cert-card reveal">
+                        <div class="cert-info">
+                            <h3 class="cert-name">Junior Web Developer (Vocational School Graduate Academy)</h3>
+                            <p class="cert-issuer">Digital Talent Scholarship · Aug 2023</p>
+                            <p class="cert-year">ID 1937037860-14</p>
+                        </div>
+                        <a href="https://digitalent.kominfo.go.id/cek-sertifikat" target="_blank" rel="noopener"
+                            class="cert-btn" aria-label="Verify Digital Talent certificate">Verify <i
+                                class="ph-light ph-arrow-up-right"></i></a>
+                    </li>
+                    <li class="cert-card reveal">
+                        <div class="cert-info">
+                            <h3 class="cert-name">Belajar Dasar Git dengan GitHub</h3>
+                            <p class="cert-issuer">Dicoding Indonesia · Aug 2023</p>
+                            <p class="cert-year">ID KEXL0R2W0PG2</p>
+                        </div>
+                        <a href="https://www.dicoding.com/certificates/KEXL0R2W0PG2" target="_blank" rel="noopener"
+                            class="cert-btn" aria-label="View Dicoding certificate">View <i
+                                class="ph-light ph-arrow-up-right"></i></a>
+                    </li>
+                    <li class="cert-card reveal">
+                        <div class="cert-info">
+                            <h3 class="cert-name">Problem Solving (Basic)</h3>
+                            <p class="cert-issuer">HackerRank · Jun 2023</p>
+                        </div>
+                        <a href="https://www.hackerrank.com/certificates/46358c442754" target="_blank" rel="noopener"
+                            class="cert-btn" aria-label="View HackerRank certificate">View <i
+                                class="ph-light ph-arrow-up-right"></i></a>
+                    </li>
+                    <li class="cert-card reveal">
+                        <div class="cert-info">
+                            <h3 class="cert-name">Laravel Course</h3>
+                            <p class="cert-issuer">Harisenin.com · May 2023</p>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1xlmI23EQtjyg_namrPdqSVlaggf7yasa/view?usp=sharing"
+                            target="_blank" rel="noopener" class="cert-btn" aria-label="View Harisenin certificate">View
+                            <i class="ph-light ph-arrow-up-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact section-padding">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="eyebrow">05 · Contact</span>
+                    <h2 class="section-title">Let's work together</h2>
+                </header>
+
+                <div class="contact-grid">
+                    <div class="contact-info-panel reveal">
+                        <h3>Hiring for a data role, or need something built?</h3>
+                        <p>Send a message with the form, or reach me directly by email or WhatsApp.</p>
+
+                        <div class="info-list">
+                            <div class="info-item">
+                                <div class="info-icon"><i class="ph-light ph-envelope-simple"></i></div>
+                                <div class="info-text">
+                                    <span>Email</span>
+                                    <a href="mailto:muhammadsurya2812@gmail.com">muhammadsurya2812@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="ph-light ph-whatsapp-logo"></i></div>
+                                <div class="info-text">
+                                    <span>WhatsApp</span>
+                                    <a href="https://wa.me/6285717358096" target="_blank" rel="noopener">+62
+                                        857-1735-8096</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-pills-container">
+                            <h4>Elsewhere</h4>
+                            <div class="pills-flex">
+                                <a href="https://github.com/muhammamdsurya" target="_blank" rel="noopener"
+                                    class="pill-link"><i class="ph-light ph-github-logo"></i> GitHub</a>
+                                <a href="https://www.linkedin.com/in/muhammadsurya281202/" target="_blank"
+                                    rel="noopener" class="pill-link"><i class="ph-light ph-linkedin-logo"></i>
+                                    LinkedIn</a>
+                                <a href="https://www.instagram.com/muhammamdsurya/" target="_blank" rel="noopener"
+                                    class="pill-link"><i class="ph-light ph-instagram-logo"></i> Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-panel reveal">
+                        <form action="https://api.web3forms.com/submit" method="POST" id="portfolio-contact-form"
+                            novalidate>
+                            <input type="hidden" name="access_key" value="152082b7-f4cf-4213-913c-2fcfcf821cee">
+
+                            <div class="form-group">
+                                <label for="form-name">Name</label>
+                                <input type="text" id="form-name" name="name" placeholder="Rina Pratama"
+                                    autocomplete="name" required>
+                                <span class="error-msg">Please enter your name.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-email">Email</label>
+                                <input type="email" id="form-email" name="email" placeholder="rina@company.co.id"
+                                    autocomplete="email" required>
+                                <span class="error-msg">Please enter a valid email address.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-subject">Subject</label>
+                                <input type="text" id="form-subject" name="subject"
+                                    placeholder="Data analyst role, dashboard project…" required>
+                                <span class="error-msg">Please add a subject.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" name="message" rows="5"
+                                    placeholder="Tell me about the role or project" required></textarea>
+                                <span class="error-msg">Please write a message.</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <span class="btn-text">Send message</span>
+                                <span class="btn-icon"><i class="ph-light ph-paper-plane-tilt"></i></span>
+                            </button>
+
+                            <div class="form-alert success hidden" id="form-success-alert" role="status">
+                                <i class="ph-light ph-check-circle"></i> Thanks, your message was sent. I'll get back
+                                to you soon.
+                            </div>
+                            <div class="form-alert error hidden" id="form-error-alert" role="alert">
+                                <i class="ph-light ph-warning-circle"></i> <span>Message not sent. Please try again or
+                                    email me directly.</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="container footer-content">
-            <p class="footer-logo">Suyaa .dev <span>// FullStack Developer</span></p>
-            <p class="footer-copy">&copy; 2026 All Rights Reserved.</p>
-            <div class="footer-status-tag"><span class="green-status-pulse"></span>Big Thanks for Visiting My Portfolio
-            </div>
+            <p class="footer-logo">Suryaa.dev <span>// Data, BI &amp; software engineering</span></p>
+            <p class="footer-copy">&copy; 2026 Muhammad Surya Rusfauzi</p>
+            <div class="footer-status-tag"><span class="green-status-pulse"></span>Thanks for visiting</div>
+        </div>
     </footer>
 
-    <!-- Custom Logic Script Link -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <dialog id="case-study" class="case-dialog" aria-labelledby="cs-title">
+        <header class="cs-header">
+            <div>
+                <p class="cs-kicker" id="cs-kicker"></p>
+                <h3 class="cs-title" id="cs-title"></h3>
+            </div>
+            <button type="button" class="cs-close" aria-label="Close case study"><i class="ph-light ph-x"></i></button>
+        </header>
+        <div class="cs-body">
+            <figure class="cs-gallery">
+                <a id="cs-img-link" target="_blank" rel="noopener" title="Open full size"><img id="cs-img" alt=""></a>
+                <button type="button" class="cs-nav cs-prev" aria-label="Previous screenshot"><i
+                        class="ph-light ph-caret-left"></i></button>
+                <button type="button" class="cs-nav cs-next" aria-label="Next screenshot"><i
+                        class="ph-light ph-caret-right"></i></button>
+                <figcaption class="cs-count" id="cs-count"></figcaption>
+            </figure>
+            <div class="cs-thumbs" id="cs-thumbs"></div>
+            <div class="cs-content" id="cs-content"></div>
+            <div class="cs-footer" id="cs-footer"></div>
+        </div>
+    </dialog>
+
     <script src="js/script.js"></script>
+    <script src="js/hero-3d.js"></script>
 </body>
 
 </html>
